@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "Person.h"
+#import "SelectorCrashTestVC.h"
+#import "KvcCrashTestVC.h"
 
 @interface ViewController ()
 
@@ -18,10 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    Person *p = [[Person alloc]init];
-    [p testInstanceFunc];
-    //[Person testClassFunc];
-    
+    self.navigationItem.title = @"TestDemo";
+    NSArray *titles = @[@"SelectorCrashTest", @"KvcCrashTest"];
+    [self addBtnsWithTitles:titles];
+}
+
+// MARK: test
+- (void)test0 {
+    SelectorCrashTestVC *vc = [[SelectorCrashTestVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)test1 {
+    KvcCrashTestVC *vc = [[KvcCrashTestVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

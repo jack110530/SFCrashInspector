@@ -1,28 +1,29 @@
 //
-//  NSObject+UnrecognizedSelectorCrash.m
+//  NSObject+SelectorCrash.m
 //  TestDemo
 //
-//  Created by 黄山锋 on 2020/10/14.
+//  Created by 黄山锋 on 2020/10/16.
 //  Copyright © 2020 SFTeam. All rights reserved.
 //
 
-#import "NSObject+UnrecognizedSelectorCrash.h"
+#import "NSObject+SelectorCrash.h"
 #import "NSObject+MethodSwizzling.h"
+#import "NSObject+CrashMessageLog.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (UnrecognizedSelectorCrash)
-
+@implementation NSObject (SelectorCrash)
 + (void)load {
 #if DEBUG
         
 #else
+    
+#endif
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // 交换forwardingTargetForSelector:方法(实例方法和对象方法)
         [NSObject sf_swizzlingInstanceMethod:@selector(forwardingTargetForSelector:) swizzledMethod:@selector(sf_forwardingTargetForSelector:) withClass:[NSObject class]];
         [NSObject sf_swizzlingClassMethod:@selector(forwardingTargetForSelector:) swizzledMethod:@selector(sf_forwardingTargetForSelector:) withClass:[NSObject class]];
     });
-#endif
 }
 
 - (id)sf_forwardingTargetForSelector:(SEL)aSelector {
@@ -124,7 +125,9 @@ static int crash(id slf, SEL selector) {
 void printCrachMessage(id obj, BOOL isMetaClass, SEL aSelector) {
     NSString *errClassName = NSStringFromClass([obj class]);
     NSString *errSel = NSStringFromSelector(aSelector);
-    NSLog(@"\n-------------------------SFCrash-------------------------\n Crash Message:\n %@[%@ %@]: unrecognized selector sent to %@ %p  \n---------------------------END---------------------------\n ***",isMetaClass?@"+":@"-", errClassName, errSel, isMetaClass?@"class":@"instance", obj);
+    NSString *msg = [NSString stringWithFormat:@"%@[%@ %@]: unrecognized selector sent to %@ %p.",isMetaClass?@"+":@"-", errClassName, errSel, isMetaClass?@"class":@"instance", obj];
+    [NSObject logCrashMessage:msg];
 }
+
 
 @end
