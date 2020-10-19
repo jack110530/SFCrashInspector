@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SFCrachInspector.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [[SFCrachInspector shareInstance] openCrashInspectorWithOptions:(SFCrashInspectorOptionSelector | SFCrashInspectorOptionKVC)];
+    [[SFCrachInspector shareInstance] closeCrashInspectorWithOption:SFCrashInspectorOptionKVC];
+    
+    
     return YES;
 }
 

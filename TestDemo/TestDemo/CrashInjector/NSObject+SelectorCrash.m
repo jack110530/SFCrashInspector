@@ -8,7 +8,7 @@
 
 #import "NSObject+SelectorCrash.h"
 #import "NSObject+MethodSwizzling.h"
-#import "NSObject+CrashMessageLog.h"
+#import "SFCrachInspector.h"
 #import <objc/runtime.h>
 
 @implementation NSObject (SelectorCrash)
@@ -126,7 +126,7 @@ void printCrachMessage(id obj, BOOL isMetaClass, SEL aSelector) {
     NSString *errClassName = NSStringFromClass([obj class]);
     NSString *errSel = NSStringFromSelector(aSelector);
     NSString *msg = [NSString stringWithFormat:@"%@[%@ %@]: unrecognized selector sent to %@ %p.",isMetaClass?@"+":@"-", errClassName, errSel, isMetaClass?@"class":@"instance", obj];
-    [NSObject logCrashMessage:msg];
+    [SFCrachInspector log:msg];
 }
 
 

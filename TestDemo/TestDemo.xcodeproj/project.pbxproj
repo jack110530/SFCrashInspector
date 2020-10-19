@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51189F8B253D308B00FE282A /* SFCrachInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189F8A253D308B00FE282A /* SFCrachInspector.m */; };
 		5151C2EF253552B800E5D683 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5151C2EE253552B800E5D683 /* ExternalAccessory.framework */; };
 		5189E6842539842400A8262A /* NSObject+SelectorCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6832539842400A8262A /* NSObject+SelectorCrash.m */; };
-		5189E68D253984B200A8262A /* NSObject+CrashMessageLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E68C253984B200A8262A /* NSObject+CrashMessageLog.m */; };
 		5189E6932539875800A8262A /* NSObject+KvcCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6922539875800A8262A /* NSObject+KvcCrash.m */; };
 		5189E69C2539891600A8262A /* SelectorCrashTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E69B2539891600A8262A /* SelectorCrashTestVC.m */; };
 		5189E6A525398CCD00A8262A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6A425398CCD00A8262A /* BaseViewController.m */; };
@@ -46,11 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		51189F89253D308B00FE282A /* SFCrachInspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFCrachInspector.h; sourceTree = "<group>"; };
+		51189F8A253D308B00FE282A /* SFCrachInspector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFCrachInspector.m; sourceTree = "<group>"; };
 		5151C2EE253552B800E5D683 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		5189E6822539842400A8262A /* NSObject+SelectorCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SelectorCrash.h"; sourceTree = "<group>"; };
 		5189E6832539842400A8262A /* NSObject+SelectorCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SelectorCrash.m"; sourceTree = "<group>"; };
-		5189E68B253984B200A8262A /* NSObject+CrashMessageLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+CrashMessageLog.h"; sourceTree = "<group>"; };
-		5189E68C253984B200A8262A /* NSObject+CrashMessageLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CrashMessageLog.m"; sourceTree = "<group>"; };
 		5189E6912539875800A8262A /* NSObject+KvcCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KvcCrash.h"; sourceTree = "<group>"; };
 		5189E6922539875800A8262A /* NSObject+KvcCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KvcCrash.m"; sourceTree = "<group>"; };
 		5189E69A2539891600A8262A /* SelectorCrashTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectorCrashTestVC.h; sourceTree = "<group>"; };
@@ -150,6 +150,21 @@
 			path = TestDemo;
 			sourceTree = "<group>";
 		};
+		5189E6B8253995BC00A8262A /* CrashInjector */ = {
+			isa = PBXGroup;
+			children = (
+				51189F89253D308B00FE282A /* SFCrachInspector.h */,
+				51189F8A253D308B00FE282A /* SFCrachInspector.m */,
+				51E40F0E2536A8C700E497BB /* NSObject+MethodSwizzling.h */,
+				51E40F0F2536A8C700E497BB /* NSObject+MethodSwizzling.m */,
+				5189E6822539842400A8262A /* NSObject+SelectorCrash.h */,
+				5189E6832539842400A8262A /* NSObject+SelectorCrash.m */,
+				5189E6912539875800A8262A /* NSObject+KvcCrash.h */,
+				5189E6922539875800A8262A /* NSObject+KvcCrash.m */,
+			);
+			path = CrashInjector;
+			sourceTree = "<group>";
+		};
 		51FFD49C251B27460065BFB4 = {
 			isa = PBXGroup;
 			children = (
@@ -183,14 +198,7 @@
 				51FFD4AE251B27460065BFB4 /* ViewController.h */,
 				51FFD4AF251B27460065BFB4 /* ViewController.m */,
 				5189E699253988BE00A8262A /* TestDemo */,
-				51E40F0E2536A8C700E497BB /* NSObject+MethodSwizzling.h */,
-				51E40F0F2536A8C700E497BB /* NSObject+MethodSwizzling.m */,
-				5189E68B253984B200A8262A /* NSObject+CrashMessageLog.h */,
-				5189E68C253984B200A8262A /* NSObject+CrashMessageLog.m */,
-				5189E6822539842400A8262A /* NSObject+SelectorCrash.h */,
-				5189E6832539842400A8262A /* NSObject+SelectorCrash.m */,
-				5189E6912539875800A8262A /* NSObject+KvcCrash.h */,
-				5189E6922539875800A8262A /* NSObject+KvcCrash.m */,
+				5189E6B8253995BC00A8262A /* CrashInjector */,
 				51FFD4B1251B27460065BFB4 /* Main.storyboard */,
 				51FFD4B4251B274A0065BFB4 /* Assets.xcassets */,
 				51FFD4B6251B274A0065BFB4 /* LaunchScreen.storyboard */,
@@ -348,7 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5189E68D253984B200A8262A /* NSObject+CrashMessageLog.m in Sources */,
+				51189F8B253D308B00FE282A /* SFCrachInspector.m in Sources */,
 				5189E6AE2539903D00A8262A /* KvcCrashTestVC.m in Sources */,
 				5189E6842539842400A8262A /* NSObject+SelectorCrash.m in Sources */,
 				5189E6A525398CCD00A8262A /* BaseViewController.m in Sources */,
