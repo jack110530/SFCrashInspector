@@ -17,6 +17,7 @@
 + (instancetype)infoWithObserver:(nonnull NSObject *)observer forKeyPath:(nonnull NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(nullable void *)context;
 
 @end
+
 @implementation SFKovInfo
 {
     @package
@@ -43,6 +44,9 @@
 
 #pragma mark - SFKvoProxy
 @interface SFKvoProxy : NSObject
+
+@property (nonatomic, weak) NSObject *observed;// 被观察者
+
 - (BOOL)addKvoInfoToMapsWithObserver:(NSObject *)observer
                           forKeyPath:(NSString *)keyPath
                              options:(NSKeyValueObservingOptions)options
@@ -54,6 +58,7 @@
                                 context:(void *)context;
 
 @end
+
 @implementation SFKvoProxy
 {
     // 关系数据表结构：{keypath : [observer1, observer2 , ...]}
@@ -184,9 +189,6 @@
 //        [NSObject sf_swizzlingInstanceMethod:@selector(removeObserver:forKeyPath:) swizzledMethod:@selector(sf_removeObserver:forKeyPath:) withClass:[NSObject class]];
 
         // 交换dealloc方法
-        /**
-         * 这里需要注意一下，如果别的地方也把dealloc方法给交换了的话，本类中的dealloc方法可能会被覆盖掉，具体要看build phase阶段文件的编译顺序而定。
-         */
         [NSObject sf_swizzlingInstanceMethod:NSSelectorFromString(@"dealloc") swizzledMethod:@selector(sf_dealloc) withClass:[NSObject class]];
 
     });
@@ -197,6 +199,8 @@
     if (isOpen && !isSystemClass(self.class)) {
         BOOL addInfoSuccess = [self.kvoProxy addKvoInfoToMapsWithObserver:observer forKeyPath:keyPath options:options context:context];
         if (addInfoSuccess) {
+            observer.kvoProxy.observed = self;
+            observer.kvoTag = SF_VALUE_KVOTAG;
             [self sf_addObserver:self.kvoProxy forKeyPath:keyPath options:options context:context];
             NSLog(@"添加KVO成功!");
         }else{
@@ -250,6 +254,19 @@
 }
 
 - (void)sf_dealloc {
+    @autoreleasepool {
+        BOOL isKvoTag = [self.kvoTag isEqualToString:SF_VALUE_KVOTAG];
+        if (isKvoTag) {
+            BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVO];
+            NSObject *observed = self.kvoProxy.observed;
+            NSObject *observer = observed.kvoProxy;
+            if (isOpen && observed) {
+                [observed sf_removeObserver:observer forKeyPath:@"name" context:NULL];
+                NSString *msg = @"该观察者正在dealloc，但是被观察者还注册着之前的KVO";
+                [SFCrachInspector log:msg];
+            }
+        }
+    }
     [self sf_dealloc];
 }
 
@@ -266,6 +283,15 @@ static void *SF_KEY_KVOPROXY = &SF_KEY_KVOPROXY;
         self.kvoProxy = proxy;
     }
     return proxy;
+}
+
+static void *SF_KEY_KVOTAG = &SF_KEY_KVOTAG;
+static NSString *const SF_VALUE_KVOTAG = @"SF_VALUE_KVOTAG";
+- (void)setKvoTag:(NSString *)kvoTag {
+    objc_setAssociatedObject(self, SF_KEY_KVOTAG, kvoTag, OBJC_ASSOCIATION_COPY);
+}
+- (NSString *)kvoTag {
+    return objc_getAssociatedObject(self, SF_KEY_KVOTAG);
 }
 
 
