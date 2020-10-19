@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		51189F8B253D308B00FE282A /* SFCrachInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189F8A253D308B00FE282A /* SFCrachInspector.m */; };
+		51189FAA253D63E600FE282A /* NSObject+KvoCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189FA9253D63E600FE282A /* NSObject+KvoCrash.m */; };
+		51189FB1253D641C00FE282A /* KvoCrashTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189FB0253D641C00FE282A /* KvoCrashTestVC.m */; };
 		5151C2EF253552B800E5D683 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5151C2EE253552B800E5D683 /* ExternalAccessory.framework */; };
 		5189E6842539842400A8262A /* NSObject+SelectorCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6832539842400A8262A /* NSObject+SelectorCrash.m */; };
 		5189E6932539875800A8262A /* NSObject+KvcCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6922539875800A8262A /* NSObject+KvcCrash.m */; };
@@ -48,6 +50,10 @@
 /* Begin PBXFileReference section */
 		51189F89253D308B00FE282A /* SFCrachInspector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFCrachInspector.h; sourceTree = "<group>"; };
 		51189F8A253D308B00FE282A /* SFCrachInspector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFCrachInspector.m; sourceTree = "<group>"; };
+		51189FA8253D63E600FE282A /* NSObject+KvoCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KvoCrash.h"; sourceTree = "<group>"; };
+		51189FA9253D63E600FE282A /* NSObject+KvoCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KvoCrash.m"; sourceTree = "<group>"; };
+		51189FAF253D641C00FE282A /* KvoCrashTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KvoCrashTestVC.h; sourceTree = "<group>"; };
+		51189FB0253D641C00FE282A /* KvoCrashTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KvoCrashTestVC.m; sourceTree = "<group>"; };
 		5151C2EE253552B800E5D683 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		5189E6822539842400A8262A /* NSObject+SelectorCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SelectorCrash.h"; sourceTree = "<group>"; };
 		5189E6832539842400A8262A /* NSObject+SelectorCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SelectorCrash.m"; sourceTree = "<group>"; };
@@ -111,6 +117,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51189FAE253D63FE00FE282A /* KvoCrash */ = {
+			isa = PBXGroup;
+			children = (
+				51189FAF253D641C00FE282A /* KvoCrashTestVC.h */,
+				51189FB0253D641C00FE282A /* KvoCrashTestVC.m */,
+			);
+			path = KvoCrash;
+			sourceTree = "<group>";
+		};
 		5151C2ED253552B800E5D683 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +159,7 @@
 				51E40F252536E48100E497BB /* Person.m */,
 				5189E6B22539924500A8262A /* Animal.h */,
 				5189E6B32539924500A8262A /* Animal.m */,
+				51189FAE253D63FE00FE282A /* KvoCrash */,
 				5189E698253988AC00A8262A /* KvcCrash */,
 				5189E6972539888B00A8262A /* SelecotrCrash */,
 			);
@@ -161,6 +177,8 @@
 				5189E6832539842400A8262A /* NSObject+SelectorCrash.m */,
 				5189E6912539875800A8262A /* NSObject+KvcCrash.h */,
 				5189E6922539875800A8262A /* NSObject+KvcCrash.m */,
+				51189FA8253D63E600FE282A /* NSObject+KvoCrash.h */,
+				51189FA9253D63E600FE282A /* NSObject+KvoCrash.m */,
 			);
 			path = CrashInjector;
 			sourceTree = "<group>";
@@ -358,11 +376,13 @@
 			files = (
 				51189F8B253D308B00FE282A /* SFCrachInspector.m in Sources */,
 				5189E6AE2539903D00A8262A /* KvcCrashTestVC.m in Sources */,
+				51189FAA253D63E600FE282A /* NSObject+KvoCrash.m in Sources */,
 				5189E6842539842400A8262A /* NSObject+SelectorCrash.m in Sources */,
 				5189E6A525398CCD00A8262A /* BaseViewController.m in Sources */,
 				51E40F102536A8C700E497BB /* NSObject+MethodSwizzling.m in Sources */,
 				51FFD4B0251B27460065BFB4 /* ViewController.m in Sources */,
 				5189E6932539875800A8262A /* NSObject+KvcCrash.m in Sources */,
+				51189FB1253D641C00FE282A /* KvoCrashTestVC.m in Sources */,
 				51E40F262536E48200E497BB /* Person.m in Sources */,
 				5189E6B42539924500A8262A /* Animal.m in Sources */,
 				51FFD4AA251B27460065BFB4 /* AppDelegate.m in Sources */,
@@ -541,6 +561,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JDYA65876X;
 				INFOPLIST_FILE = TestDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,6 +580,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JDYA65876X;
 				INFOPLIST_FILE = TestDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

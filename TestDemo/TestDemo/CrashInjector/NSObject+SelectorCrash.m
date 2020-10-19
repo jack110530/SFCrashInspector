@@ -22,7 +22,7 @@
 }
 
 - (id)sf_forwardingTargetForSelector:(SEL)aSelector {
-    BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVC];
+    BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionSelector];
     if (isOpen) {
         // 1，判断当前类有没有重写forwardingTargetForSelector:方法
         SEL forwarding_sel = @selector(forwardingTargetForSelector:);
@@ -57,7 +57,7 @@
     return [self sf_forwardingTargetForSelector:aSelector];
 }
 + (id)sf_forwardingTargetForSelector:(SEL)aSelector {
-    BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVC];
+    BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionSelector];
     if (isOpen) {
         // 1，判断当前类有没有重写forwardingTargetForSelector:方法
         SEL forwarding_sel = @selector(forwardingTargetForSelector:);

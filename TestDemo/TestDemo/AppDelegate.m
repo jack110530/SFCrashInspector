@@ -20,7 +20,7 @@
     // 开启奔溃防护
     [SFCrachInspector openAllCrashInspector];
     //[SFCrachInspector shareInstance].onlyRelease = YES;
-    
+    //[SFCrachInspector closeCrashInspectorWithOption:(SFCrashInspectorOptionKVO)];
     
     return YES;
 }

@@ -18,7 +18,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"KvcCrashTestVC";
-    NSArray *titles = @[@"key为nil", @"value为nil", @"key不是object的属性", @"keyPath不正确"];
+    NSArray *titles = @[@"key为nil",
+                        @"value为nil",
+                        @"key不是object的属性",
+                        @"keyPath不正确"];
     [self addBtnsWithTitles:titles];
     
 }

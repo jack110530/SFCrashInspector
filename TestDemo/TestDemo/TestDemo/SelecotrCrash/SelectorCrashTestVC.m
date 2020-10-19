@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"SelectorCrashTestVC";
-    NSArray *titles = @[@"找不到对象方法", @"找不到类方法"];
+    NSArray *titles = @[@"找不到对象方法",
+                        @"找不到类方法"];
     [self addBtnsWithTitles:titles];
     
 }

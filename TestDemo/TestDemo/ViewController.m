@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "SelectorCrashTestVC.h"
 #import "KvcCrashTestVC.h"
+#import "KvoCrashTestVC.h"
 
 @interface ViewController ()
 
@@ -20,7 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"TestDemo";
-    NSArray *titles = @[@"SelectorCrashTest", @"KvcCrashTest"];
+    NSArray *titles = @[@"SelectorCrashTest",
+                        @"KvcCrashTest",
+                        @"KvoCrashTestVC"];
     [self addBtnsWithTitles:titles];
 }
 
@@ -31,6 +34,10 @@
 }
 - (void)test1 {
     KvcCrashTestVC *vc = [[KvcCrashTestVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)test2 {
+    KvoCrashTestVC *vc = [[KvoCrashTestVC alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
