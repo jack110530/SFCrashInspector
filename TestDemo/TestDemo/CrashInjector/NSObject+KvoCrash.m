@@ -57,6 +57,8 @@
                                 options:(NSKeyValueObservingOptions)options
                                 context:(void *)context;
 
+- (NSSet<SFKovInfo *> *)getInfoSetWithObserver:(NSObject *)observer;
+
 @end
 
 @implementation SFKvoProxy
@@ -83,7 +85,7 @@
         if (!info) {
             return NO;
         }
-        NSMutableSet<SFKovInfo *> *infoSet = [self getSafeinfoSetWithKeyPath:keyPath];
+        NSMutableSet<SFKovInfo *> *infoSet = [self getSafeInfoSetWithKeyPath:keyPath];
         BOOL isExist = [self checkExistWithKvoInfo:info ininfoSet:infoSet];
         if (isExist) {
             return NO;
@@ -104,7 +106,7 @@
         if (!info) {
             return NO;
         }
-        NSMutableSet<SFKovInfo *> *infoSet = [self getSafeinfoSetWithKeyPath:keyPath];
+        NSMutableSet<SFKovInfo *> *infoSet = [self getSafeInfoSetWithKeyPath:keyPath];
         BOOL isExist = [self checkExistWithKvoInfo:info ininfoSet:infoSet];
         if (isExist) {
             for (SFKovInfo *obj in infoSet) {
@@ -121,7 +123,7 @@
     }
 }
 
-- (NSMutableSet<SFKovInfo *> *)getSafeinfoSetWithKeyPath:(NSString *)keyPath {
+- (NSMutableSet<SFKovInfo *> *)getSafeInfoSetWithKeyPath:(NSString *)keyPath {
     NSMutableSet<SFKovInfo *> *infoSet;
     if ([_kvoInfoMap.allKeys containsObject:keyPath]) {
         infoSet = _kvoInfoMap[keyPath];
@@ -143,6 +145,18 @@
         }
         return contains;
     }
+}
+
+- (NSSet<SFKovInfo *> *)getInfoSetWithObserver:(NSObject *)observer {
+    NSMutableSet<SFKovInfo *> *set = [NSMutableSet set];
+    [_kvoInfoMap enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull keyPath, NSMutableSet<SFKovInfo *> * _Nonnull infoSet, BOOL * _Nonnull stop) {
+        for (SFKovInfo *info in infoSet) {
+            if (info->_observer == observer) {
+                [set addObject:info];
+            }
+        }
+    }];
+    return set.copy;
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -200,7 +214,8 @@
         BOOL addInfoSuccess = [self.kvoProxy addKvoInfoToMapsWithObserver:observer forKeyPath:keyPath options:options context:context];
         if (addInfoSuccess) {
             observer.kvoProxy.observed = self;
-            observer.kvoTag = SF_VALUE_KVOTAG;
+            observer.kvoTag = SF_VALUE_KVOTAG_OBSERVER;
+            self.kvoTag = SF_VALUE_KVOTAG_OBSERVED;
             [self sf_addObserver:self.kvoProxy forKeyPath:keyPath options:options context:context];
             NSLog(@"添加KVO成功!");
         }else{
@@ -255,15 +270,29 @@
 
 - (void)sf_dealloc {
     @autoreleasepool {
-        BOOL isKvoTag = [self.kvoTag isEqualToString:SF_VALUE_KVOTAG];
+        BOOL isKvoTag = ([self.kvoTag isEqualToString:SF_VALUE_KVOTAG_OBSERVER] || [self.kvoTag isEqualToString:SF_VALUE_KVOTAG_OBSERVED]);
         if (isKvoTag) {
             BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVO];
-            NSObject *observed = self.kvoProxy.observed;
-            NSObject *observer = observed.kvoProxy;
-            if (isOpen && observed) {
-                [observed sf_removeObserver:observer forKeyPath:@"name" context:NULL];
-                NSString *msg = @"该观察者正在dealloc，但是被观察者还注册着之前的KVO";
-                [SFCrachInspector log:msg];
+            if (isOpen) {
+                if ([self.kvoTag isEqualToString:SF_VALUE_KVOTAG_OBSERVER]) {
+                    // 当前正在dealloc的是观察者
+                    NSObject *observed = self.kvoProxy.observed;
+                    SFKvoProxy *observer = observed.kvoProxy;
+                    if (observed) {
+                        NSMutableString *msg = [NSMutableString stringWithFormat:@"【KVO】观察者正在dealloc时，移除被观察者：%@ 和当前观察者：%@ 之间注册的所有KVO\n", observed, self];
+                        NSSet *infoSet = [observer getInfoSetWithObserver:self];
+                        for (SFKovInfo *info in infoSet) {
+                            [observed sf_removeObserver:info->_observer forKeyPath:info->_keyPath context:info->_context?:NULL];
+                            NSString *str = [NSString stringWithFormat:@"移除keyPath：%@ context：%@\n", info->_keyPath, info->_context?:NULL];
+                            [msg appendString:str];
+                        }
+                        [SFCrachInspector log:msg];
+                    }
+                }
+                else {
+                    // 当前正在dealloc的是被观察者
+                    
+                }
             }
         }
     }
@@ -286,7 +315,8 @@ static void *SF_KEY_KVOPROXY = &SF_KEY_KVOPROXY;
 }
 
 static void *SF_KEY_KVOTAG = &SF_KEY_KVOTAG;
-static NSString *const SF_VALUE_KVOTAG = @"SF_VALUE_KVOTAG";
+static NSString *const SF_VALUE_KVOTAG_OBSERVER = @"SF_VALUE_KVOTAG_OBSERVER";
+static NSString *const SF_VALUE_KVOTAG_OBSERVED = @"SF_VALUE_KVOTAG_OBSERVED";
 - (void)setKvoTag:(NSString *)kvoTag {
     objc_setAssociatedObject(self, SF_KEY_KVOTAG, kvoTag, OBJC_ASSOCIATION_COPY);
 }
