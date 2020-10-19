@@ -18,8 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [[SFCrachInspector shareInstance] openCrashInspectorWithOptions:(SFCrashInspectorOptionSelector | SFCrashInspectorOptionKVC)];
-    [[SFCrachInspector shareInstance] closeCrashInspectorWithOption:SFCrashInspectorOptionKVC];
+    [SFCrachInspector openCrashInspectorWithOptions:(SFCrashInspectorOptionSelector | SFCrashInspectorOptionKVC)];
     
     
     return YES;

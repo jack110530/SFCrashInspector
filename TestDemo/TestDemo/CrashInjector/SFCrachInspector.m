@@ -13,7 +13,7 @@
 @end
 
 @implementation SFCrachInspector
-// MARK: 单例
+#pragma mark - 单例
 static SFCrachInspector *_instance = nil;
 + (instancetype)shareInstance {
     static dispatch_once_t onceToken ;
@@ -31,7 +31,8 @@ static SFCrachInspector *_instance = nil;
     return [SFCrachInspector shareInstance] ;
 }
 
-// MARK: func
+#pragma mark - func
+// MARK: 对象方法
 /// 开启崩溃防护
 /// @param options 崩溃类型（可多选）
 - (void)openCrashInspectorWithOptions:(SFCrashInspectorOption)options {
@@ -61,6 +62,46 @@ static SFCrachInspector *_instance = nil;
 /// @param option 崩溃类型
 - (BOOL)checkIsOpenWithOption:(SFCrashInspectorOption)option {
     return self.crashOptions & option;
+}
+
+/// 崩溃日志打印
+/// @param message 日志信息
+- (void)log:(NSString *)message {
+    NSString *start = @"\n---------------------- SFCrash Message ----------------------\n";
+    NSString *end =   @"\n---------------------------- END ----------------------------\n";
+    NSLog(@"%@%@%@",start,message,end);
+}
+
+// MARK: 类方法
+/// 开启崩溃防护
+/// @param options 崩溃类型（可多选）
++ (void)openCrashInspectorWithOptions:(SFCrashInspectorOption)options {
+    [SFCrachInspector shareInstance].crashOptions = options;
+}
+
+/// 开启所有类型的崩溃防护
++ (void)openAllCrashInspector {
+    [SFCrachInspector shareInstance].crashOptions = SFCrashInspectorOptionSelector | SFCrashInspectorOptionKVC | SFCrashInspectorOptionKVO;
+}
+
+/// 关闭指定的崩溃类型
+/// @param option 崩溃类型
++ (void)closeCrashInspectorWithOption:(SFCrashInspectorOption)option {
+    SFCrashInspectorOption options = [SFCrachInspector shareInstance].crashOptions;
+    if (options & option) {
+        [SFCrachInspector shareInstance].crashOptions = options ^ option;
+    }
+}
+
+/// 关闭所有类型的崩溃防护
++ (void)closeAllCrashInspector {
+    [SFCrachInspector shareInstance].crashOptions = 0;
+}
+
+/// 检查该类崩溃防护是否开启
+/// @param option 崩溃类型
++ (BOOL)checkIsOpenWithOption:(SFCrashInspectorOption)option {
+    return [SFCrachInspector shareInstance].crashOptions & option;
 }
 
 /// 崩溃日志打印
