@@ -17,7 +17,9 @@ typedef NS_OPTIONS(NSUInteger, SFCrashInspectorOption) {
 };
 
 @interface SFCrachInspector : NSObject
-@property (nonatomic, assign, readonly) SFCrashInspectorOption crashOptions;
+
+/// 是否仅在Release模式下开启crash防护，默认Release和Debug模式都开启
+@property (nonatomic, assign) BOOL onlyRelease;
 
 #pragma mark - 单例
 + (instancetype)shareInstance;

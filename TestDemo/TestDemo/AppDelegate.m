@@ -17,8 +17,9 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
+    // 开启奔溃防护
     [SFCrachInspector openAllCrashInspector];
+    //[SFCrachInspector shareInstance].onlyRelease = YES;
     
     
     return YES;

@@ -60,7 +60,15 @@ static SFCrachInspector *_instance = nil;
 /// 检查该类崩溃防护是否开启
 /// @param option 崩溃类型
 + (BOOL)checkIsOpenWithOption:(SFCrashInspectorOption)option {
-    return [SFCrachInspector shareInstance].crashOptions & option;
+    BOOL isOpen = [SFCrachInspector shareInstance].crashOptions & option;
+    if ([SFCrachInspector shareInstance].onlyRelease) {
+#ifdef DEBUG
+        isOpen = NO;
+#else
+        
+#endif
+    }
+    return isOpen;
 }
 
 /// 崩溃日志打印
