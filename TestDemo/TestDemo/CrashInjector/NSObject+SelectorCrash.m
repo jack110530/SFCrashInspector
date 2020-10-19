@@ -13,11 +13,6 @@
 
 @implementation NSObject (SelectorCrash)
 + (void)load {
-#if DEBUG
-        
-#else
-    
-#endif
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // 交换forwardingTargetForSelector:方法(实例方法和对象方法)
@@ -27,67 +22,71 @@
 }
 
 - (id)sf_forwardingTargetForSelector:(SEL)aSelector {
-    // 1，判断当前类有没有重写forwardingTargetForSelector:方法
-    SEL forwarding_sel = @selector(forwardingTargetForSelector:);
-    BOOL override_forwarding = checkMethodOverride([self class], NO, forwarding_sel);
-    if (!override_forwarding) {
-        // 没有重写「备用接受者」
-        // 2，判断当前类有没有重写methodSignatureForSelector:方法
-        SEL methodSignature_sel = @selector(methodSignatureForSelector:);
-        BOOL override_methodSignature = checkMethodOverride([self class], NO, methodSignature_sel);
-        if (!override_methodSignature) {
-            // 没有重写「方法签名」
-            // 3，把消息转发到当前动态生成类的实例对象上
-            NSString *className = @"SFCrachInspector";
-            Class cls = NSClassFromString(className);
-            // 如果类不存在 动态创建一个类
-            if (!cls) {
-                Class superClsss = [NSObject class];
-                cls = objc_allocateClassPair(superClsss, className.UTF8String, 0);
-                // 注册类
-                objc_registerClassPair(cls);
+    BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVC];
+    if (isOpen) {
+        // 1，判断当前类有没有重写forwardingTargetForSelector:方法
+        SEL forwarding_sel = @selector(forwardingTargetForSelector:);
+        BOOL override_forwarding = checkMethodOverride([self class], NO, forwarding_sel);
+        if (!override_forwarding) {
+            // 没有重写「备用接受者」
+            // 2，判断当前类有没有重写methodSignatureForSelector:方法
+            SEL methodSignature_sel = @selector(methodSignatureForSelector:);
+            BOOL override_methodSignature = checkMethodOverride([self class], NO, methodSignature_sel);
+            if (!override_methodSignature) {
+                // 没有重写「方法签名」
+                // 3，把消息转发到当前动态生成类的实例对象上
+                NSString *className = @"SFCrachInspector";
+                Class cls = NSClassFromString(className);
+                // 如果类不存在 动态创建一个类
+                if (!cls) {
+                    Class superClsss = [NSObject class];
+                    cls = objc_allocateClassPair(superClsss, className.UTF8String, 0);
+                    // 注册类
+                    objc_registerClassPair(cls);
+                }
+                // 如果类没有对应的方法，则动态添加一个
+                if (!class_getInstanceMethod(NSClassFromString(className), aSelector)) {
+                    class_addMethod(cls, aSelector, (IMP)crash, "@@:@");
+                }
+                // 打印日志
+                printCrachMessage(self, NO, aSelector);
+                return [[cls alloc] init];
             }
-            // 如果类没有对应的方法，则动态添加一个
-            if (!class_getInstanceMethod(NSClassFromString(className), aSelector)) {
-                class_addMethod(cls, aSelector, (IMP)crash, "@@:@");
-            }
-            // 打印日志
-            printCrachMessage(self, NO, aSelector);
-            
-            return [[cls alloc] init];
         }
     }
     return [self sf_forwardingTargetForSelector:aSelector];
 }
 + (id)sf_forwardingTargetForSelector:(SEL)aSelector {
-    // 1，判断当前类有没有重写forwardingTargetForSelector:方法
-    SEL forwarding_sel = @selector(forwardingTargetForSelector:);
-    BOOL override_forwarding = checkMethodOverride([self class], YES, forwarding_sel);
-    if (!override_forwarding) {
-        // 没有重写「备用接受者」
-        // 2，判断当前类有没有重写methodSignatureForSelector:方法
-        SEL methodSignature_sel = @selector(methodSignatureForSelector:);
-        BOOL override_methodSignature = checkMethodOverride([self class], YES, methodSignature_sel);
-        if (!override_methodSignature) {
-            // 没有重写「方法签名」
-            // 3，把消息转发到当前动态生成类的实例对象上
-            NSString *className = @"SFCrachInspector";
-            Class cls = NSClassFromString(className);
-            // 如果类不存在 动态创建一个类
-            if (!cls) {
-                Class superClsss = [NSObject class];
-                cls = objc_allocateClassPair(superClsss, className.UTF8String, 0);
-                // 注册类
-                objc_registerClassPair(cls);
+    BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVC];
+    if (isOpen) {
+        // 1，判断当前类有没有重写forwardingTargetForSelector:方法
+        SEL forwarding_sel = @selector(forwardingTargetForSelector:);
+        BOOL override_forwarding = checkMethodOverride([self class], YES, forwarding_sel);
+        if (!override_forwarding) {
+            // 没有重写「备用接受者」
+            // 2，判断当前类有没有重写methodSignatureForSelector:方法
+            SEL methodSignature_sel = @selector(methodSignatureForSelector:);
+            BOOL override_methodSignature = checkMethodOverride([self class], YES, methodSignature_sel);
+            if (!override_methodSignature) {
+                // 没有重写「方法签名」
+                // 3，把消息转发到当前动态生成类的实例对象上
+                NSString *className = @"SFCrachInspector";
+                Class cls = NSClassFromString(className);
+                // 如果类不存在 动态创建一个类
+                if (!cls) {
+                    Class superClsss = [NSObject class];
+                    cls = objc_allocateClassPair(superClsss, className.UTF8String, 0);
+                    // 注册类
+                    objc_registerClassPair(cls);
+                }
+                // 如果类没有对应的方法，则动态添加一个
+                if (!class_getInstanceMethod(NSClassFromString(className), aSelector)) {
+                    class_addMethod(cls, aSelector, (IMP)crash, "@@:@");
+                }
+                // 打印日志
+                printCrachMessage(self, YES, aSelector);
+                return [[cls alloc] init];
             }
-            // 如果类没有对应的方法，则动态添加一个
-            if (!class_getInstanceMethod(NSClassFromString(className), aSelector)) {
-                class_addMethod(cls, aSelector, (IMP)crash, "@@:@");
-            }
-            // 打印日志
-            printCrachMessage(self, YES, aSelector);
-            
-            return [[cls alloc] init];
         }
     }
     return [self sf_forwardingTargetForSelector:aSelector];
