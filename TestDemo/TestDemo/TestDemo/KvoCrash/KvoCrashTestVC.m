@@ -105,8 +105,8 @@
     NSLog(@"object = %@ \n keyPath = %@ \n change = %@ \n context = %@", object, keyPath, change, context);
 }
 
-- (void)dealloc {
-    NSLog(@"%s", __func__);
-}
+//- (void)dealloc {
+//    NSLog(@"%s", __func__);
+//}
 
 @end
