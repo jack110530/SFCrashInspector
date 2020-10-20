@@ -40,7 +40,9 @@
 - (void)clickBtn:(UIButton *)sender {
     NSString *selectorStr = [NSString stringWithFormat:@"test%ld",sender.tag];
     SEL selector = NSSelectorFromString(selectorStr);
-    [self performSelector:selector];
+    if ([self respondsToSelector:selector]) {
+        [self performSelector:selector];
+    }
 }
 
 @end

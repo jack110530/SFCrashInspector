@@ -10,6 +10,10 @@
 		51189F8B253D308B00FE282A /* SFCrachInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189F8A253D308B00FE282A /* SFCrachInspector.m */; };
 		51189FAA253D63E600FE282A /* NSObject+KvoCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189FA9253D63E600FE282A /* NSObject+KvoCrash.m */; };
 		51189FB1253D641C00FE282A /* KvoCrashTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189FB0253D641C00FE282A /* KvoCrashTestVC.m */; };
+		51189FDB253EBA1F00FE282A /* SFProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189FDA253EBA1F00FE282A /* SFProxy.m */; };
+		51189FE1253EBA9A00FE282A /* NSTimer+TimerCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189FE0253EBA9A00FE282A /* NSTimer+TimerCrash.m */; };
+		51189FE7253EC00200FE282A /* SFTimerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189FE6253EC00200FE282A /* SFTimerProxy.m */; };
+		51189FEE253EC3A300FE282A /* TimerCrashTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189FED253EC3A200FE282A /* TimerCrashTestVC.m */; };
 		5151C2EF253552B800E5D683 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5151C2EE253552B800E5D683 /* ExternalAccessory.framework */; };
 		5189E6842539842400A8262A /* NSObject+SelectorCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6832539842400A8262A /* NSObject+SelectorCrash.m */; };
 		5189E6932539875800A8262A /* NSObject+KvcCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6922539875800A8262A /* NSObject+KvcCrash.m */; };
@@ -54,6 +58,14 @@
 		51189FA9253D63E600FE282A /* NSObject+KvoCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KvoCrash.m"; sourceTree = "<group>"; };
 		51189FAF253D641C00FE282A /* KvoCrashTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KvoCrashTestVC.h; sourceTree = "<group>"; };
 		51189FB0253D641C00FE282A /* KvoCrashTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KvoCrashTestVC.m; sourceTree = "<group>"; };
+		51189FD9253EBA1F00FE282A /* SFProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFProxy.h; sourceTree = "<group>"; };
+		51189FDA253EBA1F00FE282A /* SFProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFProxy.m; sourceTree = "<group>"; };
+		51189FDF253EBA9A00FE282A /* NSTimer+TimerCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSTimer+TimerCrash.h"; sourceTree = "<group>"; };
+		51189FE0253EBA9A00FE282A /* NSTimer+TimerCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+TimerCrash.m"; sourceTree = "<group>"; };
+		51189FE5253EC00200FE282A /* SFTimerProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFTimerProxy.h; sourceTree = "<group>"; };
+		51189FE6253EC00200FE282A /* SFTimerProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFTimerProxy.m; sourceTree = "<group>"; };
+		51189FEC253EC3A200FE282A /* TimerCrashTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerCrashTestVC.h; sourceTree = "<group>"; };
+		51189FED253EC3A200FE282A /* TimerCrashTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerCrashTestVC.m; sourceTree = "<group>"; };
 		5151C2EE253552B800E5D683 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		5189E6822539842400A8262A /* NSObject+SelectorCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SelectorCrash.h"; sourceTree = "<group>"; };
 		5189E6832539842400A8262A /* NSObject+SelectorCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SelectorCrash.m"; sourceTree = "<group>"; };
@@ -126,6 +138,15 @@
 			path = KvoCrash;
 			sourceTree = "<group>";
 		};
+		51189FEB253EC38D00FE282A /* TimerCrash */ = {
+			isa = PBXGroup;
+			children = (
+				51189FEC253EC3A200FE282A /* TimerCrashTestVC.h */,
+				51189FED253EC3A200FE282A /* TimerCrashTestVC.m */,
+			);
+			path = TimerCrash;
+			sourceTree = "<group>";
+		};
 		5151C2ED253552B800E5D683 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +180,7 @@
 				51E40F252536E48100E497BB /* Person.m */,
 				5189E6B22539924500A8262A /* Animal.h */,
 				5189E6B32539924500A8262A /* Animal.m */,
+				51189FEB253EC38D00FE282A /* TimerCrash */,
 				51189FAE253D63FE00FE282A /* KvoCrash */,
 				5189E698253988AC00A8262A /* KvcCrash */,
 				5189E6972539888B00A8262A /* SelecotrCrash */,
@@ -179,6 +201,12 @@
 				5189E6922539875800A8262A /* NSObject+KvcCrash.m */,
 				51189FA8253D63E600FE282A /* NSObject+KvoCrash.h */,
 				51189FA9253D63E600FE282A /* NSObject+KvoCrash.m */,
+				51189FDF253EBA9A00FE282A /* NSTimer+TimerCrash.h */,
+				51189FE0253EBA9A00FE282A /* NSTimer+TimerCrash.m */,
+				51189FD9253EBA1F00FE282A /* SFProxy.h */,
+				51189FDA253EBA1F00FE282A /* SFProxy.m */,
+				51189FE5253EC00200FE282A /* SFTimerProxy.h */,
+				51189FE6253EC00200FE282A /* SFTimerProxy.m */,
 			);
 			path = CrashInjector;
 			sourceTree = "<group>";
@@ -374,9 +402,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51189FE1253EBA9A00FE282A /* NSTimer+TimerCrash.m in Sources */,
+				51189FE7253EC00200FE282A /* SFTimerProxy.m in Sources */,
 				51189F8B253D308B00FE282A /* SFCrachInspector.m in Sources */,
 				5189E6AE2539903D00A8262A /* KvcCrashTestVC.m in Sources */,
 				51189FAA253D63E600FE282A /* NSObject+KvoCrash.m in Sources */,
+				51189FEE253EC3A300FE282A /* TimerCrashTestVC.m in Sources */,
 				5189E6842539842400A8262A /* NSObject+SelectorCrash.m in Sources */,
 				5189E6A525398CCD00A8262A /* BaseViewController.m in Sources */,
 				51E40F102536A8C700E497BB /* NSObject+MethodSwizzling.m in Sources */,
@@ -389,6 +420,7 @@
 				51FFD4BB251B274A0065BFB4 /* main.m in Sources */,
 				51FFD4AD251B27460065BFB4 /* SceneDelegate.m in Sources */,
 				5189E69C2539891600A8262A /* SelectorCrashTestVC.m in Sources */,
+				51189FDB253EBA1F00FE282A /* SFProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,6 +14,7 @@ typedef NS_OPTIONS(NSUInteger, SFCrashInspectorOption) {
     SFCrashInspectorOptionSelector       = 1 <<  0,
     SFCrashInspectorOptionKVC            = 1 <<  1,
     SFCrashInspectorOptionKVO            = 1 <<  2,
+    SFCrashInspectorOptionTimer          = 1 <<  3,
 };
 
 @interface SFCrachInspector : NSObject

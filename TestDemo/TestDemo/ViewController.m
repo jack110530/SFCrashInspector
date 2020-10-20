@@ -10,6 +10,7 @@
 #import "SelectorCrashTestVC.h"
 #import "KvcCrashTestVC.h"
 #import "KvoCrashTestVC.h"
+#import "TimerCrashTestVC.h"
 
 @interface ViewController ()
 
@@ -23,7 +24,8 @@
     self.navigationItem.title = @"TestDemo";
     NSArray *titles = @[@"SelectorCrashTest",
                         @"KvcCrashTest",
-                        @"KvoCrashTestVC"];
+                        @"KvoCrashTestVC",
+                        @"TimerCrashTestVC"];
     [self addBtnsWithTitles:titles];
 }
 
@@ -38,6 +40,10 @@
 }
 - (void)test2 {
     KvoCrashTestVC *vc = [[KvoCrashTestVC alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+- (void)test3 {
+    TimerCrashTestVC *vc = [[TimerCrashTestVC alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -40,7 +40,7 @@ static SFCrachInspector *_instance = nil;
 
 /// 开启所有类型的崩溃防护
 + (void)openAllCrashInspector {
-    [SFCrachInspector shareInstance].crashOptions = SFCrashInspectorOptionSelector | SFCrashInspectorOptionKVC | SFCrashInspectorOptionKVO;
+    [SFCrachInspector shareInstance].crashOptions = SFCrashInspectorOptionSelector | SFCrashInspectorOptionKVC | SFCrashInspectorOptionKVO | SFCrashInspectorOptionTimer;
 }
 
 /// 关闭指定的崩溃类型
