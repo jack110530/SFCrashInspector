@@ -331,11 +331,9 @@
             }
         }
     }
-    
-    
 }
 
-// MARK: 关联对象
+#pragma mark - 关联对象
 // MARK: 代理
 static void *SF_KEY_KVOPROXY = &SF_KEY_KVOPROXY;
 - (void)setKvoProxy:(SFKvoProxy *)kvoProxy {
@@ -350,6 +348,7 @@ static void *SF_KEY_KVOPROXY = &SF_KEY_KVOPROXY;
     return proxy;
 }
 
+// MARK: 标签
 static void *SF_KEY_KVOTAG = &SF_KEY_KVOTAG;
 static NSString *const SF_VALUE_KVOTAG_OBSERVER = @"SF_VALUE_KVOTAG_OBSERVER";
 static NSString *const SF_VALUE_KVOTAG_OBSERVED = @"SF_VALUE_KVOTAG_OBSERVED";
