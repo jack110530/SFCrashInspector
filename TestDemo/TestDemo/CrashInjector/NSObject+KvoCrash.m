@@ -174,14 +174,19 @@
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    NSObject *observed = (NSObject *)object;
+    NSMutableString *msg = [NSMutableString stringWithFormat:@"【KVO】观察者正在dealloc时，移除被观察者：%@ 和当前观察者之间注册的所有KVO\n", observed];
     NSMutableSet<SFKovInfo *> *infoSet = _kvoInfoMap[keyPath];
+    NSInteger idx = 0;
     for (SFKovInfo *info in infoSet.copy) {
         if (!info->_observer) {
+            idx++;
             [infoSet removeObject:info];
-            NSString *className = (NSStringFromClass([object class]) == nil) ? @"" : NSStringFromClass([object class]);
-            NSString *msg = [NSString stringWithFormat:@"【KVO】observer dealloc for the key path:'%@' from %@", keyPath, className];
-            [SFCrachInspector log:msg];
+            [observed sf_removeObserver:self forKeyPath:info->_keyPath context:info->_context];
+            NSString *str = [NSString stringWithFormat:@" %ld）移除keyPath：%@，context：%@\n", idx, info->_keyPath, info->_context?:NULL];
+            [msg appendString:str];
         }
+        [SFCrachInspector log:msg];
     }
     _kvoInfoMap[keyPath] = infoSet;
     for (SFKovInfo *info in infoSet) {
@@ -296,17 +301,19 @@
                 if (isOpen) {
                     if ([self.kvoTag isEqualToString:SF_VALUE_KVOTAG_OBSERVER]) {
                         // 当前正在dealloc的是观察者
+                        // 由于「不知道为什么这两个对象地址明明是一样的，为啥就不进if里面」的问题（搜索一下就知道了）
+                        // 这种情况的解决方案放在了kvoProxy的observeValueForKeyPath:ofObject:change:context:方法中进行处理(推后处理)
                         NSObject *observed = self.kvoProxy.observed;
                         NSObject *observer = self;
                         SFKvoProxy *kvoProxy = observed.kvoProxy;
                         if (observed) {
                             NSMutableString *msg = [NSMutableString stringWithFormat:@"【KVO】观察者正在dealloc时，移除被观察者：%@ 和当前观察者：%@ 之间注册的所有KVO\n", observed, observer];
-                            NSSet *infoSet = [kvoProxy getInfoSetWithObserver:observer];
-                            for (SFKovInfo *info in infoSet) {
-                                [observed removeObserver:observer forKeyPath:info->_keyPath context:info->_context?:NULL];
-                                NSString *str = [NSString stringWithFormat:@"移除keyPath：%@，context：%@\n", info->_keyPath, info->_context?:NULL];
-                                [msg appendString:str];
-                            }
+//                            NSSet *infoSet = [kvoProxy getInfoSetWithObserver:observer];
+//                            for (SFKovInfo *info in infoSet) {
+//                                [observed removeObserver:observer forKeyPath:info->_keyPath context:info->_context?:NULL];
+//                                NSString *str = [NSString stringWithFormat:@"移除keyPath：%@，context：%@\n", info->_keyPath, info->_context?:NULL];
+//                                [msg appendString:str];
+//                            }
                             [SFCrachInspector log:msg];
                         }
                     }
