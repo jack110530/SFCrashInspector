@@ -124,7 +124,7 @@ static int crash(id slf, SEL selector) {
 void printCrachMessage(id obj, BOOL isMetaClass, SEL aSelector) {
     NSString *errClassName = NSStringFromClass([obj class]);
     NSString *errSel = NSStringFromSelector(aSelector);
-    NSString *msg = [NSString stringWithFormat:@"%@[%@ %@]: unrecognized selector sent to %@ %p.",isMetaClass?@"+":@"-", errClassName, errSel, isMetaClass?@"class":@"instance", obj];
+    NSString *msg = [NSString stringWithFormat:@"【Selector】%@[%@ %@]: unrecognized selector sent to %@ %p.",isMetaClass?@"+":@"-", errClassName, errSel, isMetaClass?@"class":@"instance", obj];
     [SFCrachInspector log:msg];
 }
 

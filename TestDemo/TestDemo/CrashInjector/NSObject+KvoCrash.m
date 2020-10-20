@@ -50,12 +50,12 @@
 - (BOOL)addKvoInfoToMapsWithObserver:(NSObject *)observer
                           forKeyPath:(NSString *)keyPath
                              options:(NSKeyValueObservingOptions)options
-                             context:(void *)context;
+                             context:(nullable void *)context;
 
 - (BOOL)removeKvoInfoToMapsWithObserver:(NSObject *)observer
                              forKeyPath:(NSString *)keyPath
                                 options:(NSKeyValueObservingOptions)options
-                                context:(void *)context;
+                                context:(nullable void *)context;
 
 - (NSSet<SFKovInfo *> *)getInfoSetWithObserver:(NSObject *)observer;
 
@@ -79,7 +79,7 @@
 - (BOOL)addKvoInfoToMapsWithObserver:(NSObject *)observer
                           forKeyPath:(NSString *)keyPath
                              options:(NSKeyValueObservingOptions)options
-                             context:(void *)context{
+                             context:(nullable void *)context{
     @synchronized (self) {
         SFKovInfo *info = [SFKovInfo infoWithObserver:observer forKeyPath:keyPath options:options context:context];
         if (!info) {
@@ -100,7 +100,7 @@
 - (BOOL)removeKvoInfoToMapsWithObserver:(NSObject *)observer
                              forKeyPath:(NSString *)keyPath
                                 options:(NSKeyValueObservingOptions)options
-                                context:(void *)context{
+                                context:(nullable void *)context{
     @synchronized (self) {
         SFKovInfo *info = [SFKovInfo infoWithObserver:observer forKeyPath:keyPath options:options context:context];
         if (!info) {
@@ -173,7 +173,7 @@
     return set;
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(nullable void *)context {
     NSObject *observed = (NSObject *)object;
     NSMutableString *msg = [NSMutableString stringWithFormat:@"【KVO】观察者正在dealloc时，移除被观察者：%@ 和当前观察者之间注册的所有KVO\n", observed];
     NSMutableSet<SFKovInfo *> *infoSet = _kvoInfoMap[keyPath];
@@ -227,7 +227,7 @@
     });
 }
 
-- (void)sf_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
+- (void)sf_addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(nullable void *)context {
     BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVO];
     if (isOpen && !isSystemClass(self.class)) {
         BOOL addInfoSuccess = [self.kvoProxy addKvoInfoToMapsWithObserver:observer forKeyPath:keyPath options:options context:context];
@@ -249,7 +249,7 @@
     [self sf_addObserver:observer forKeyPath:keyPath options:options context:context];
 }
 
-- (void)sf_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context {
+- (void)sf_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(nullable void *)context {
     BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVO];
     if (isOpen && !isSystemClass(self.class)) {
         BOOL removeInfoSuccess = [self.kvoProxy removeKvoInfoToMapsWithObserver:observer forKeyPath:keyPath options:0 context:context];
@@ -305,7 +305,7 @@
                         // 这种情况的解决方案放在了kvoProxy的observeValueForKeyPath:ofObject:change:context:方法中进行处理(推后处理)
                         NSObject *observed = self.kvoProxy.observed;
                         NSObject *observer = self;
-                        SFKvoProxy *kvoProxy = observed.kvoProxy;
+                        //SFKvoProxy *kvoProxy = observed.kvoProxy;
                         if (observed) {
                             NSMutableString *msg = [NSMutableString stringWithFormat:@"【KVO】观察者正在dealloc时，移除被观察者：%@ 和当前观察者：%@ 之间注册的所有KVO\n", observed, observer];
 //                            NSSet *infoSet = [kvoProxy getInfoSetWithObserver:observer];

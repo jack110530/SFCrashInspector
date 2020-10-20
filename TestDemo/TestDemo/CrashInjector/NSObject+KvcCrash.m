@@ -24,7 +24,7 @@
     BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVC];
     if (isOpen) {
         if (!key) {
-            NSString *msg = [NSString stringWithFormat:@"[<%@ %p> setValue:forKey:]: attempt to set a value for a nil key. ",NSStringFromClass([self class]),self];
+            NSString *msg = [NSString stringWithFormat:@"【KVC】[<%@ %p> setValue:forKey:]: attempt to set a value for a nil key. ",NSStringFromClass([self class]),self];
             [SFCrachInspector log:msg];
             return;
         }
@@ -35,7 +35,7 @@
 - (void)setNilValueForKey:(NSString *)key {
     BOOL isOpen = [SFCrachInspector  checkIsOpenWithOption:SFCrashInspectorOptionKVC];
     if (isOpen) {
-        NSString *msg = [NSString stringWithFormat:@"[<%@ %p> setNilValueForKey]: could not set nil as the value for the key %@.",NSStringFromClass([self class]),self,key];
+        NSString *msg = [NSString stringWithFormat:@"【KVC】[<%@ %p> setNilValueForKey]: could not set nil as the value for the key %@.",NSStringFromClass([self class]),self,key];
         [SFCrachInspector log:msg];
     }
 }
@@ -43,7 +43,7 @@
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVC];
     if (isOpen) {
-        NSString *msg = [NSString stringWithFormat:@"[<%@ %p> setValue:forUndefinedKey:]: this class is not key value coding-compliant for the key: %@,value:%@'.",NSStringFromClass([self class]),self,key,value];
+        NSString *msg = [NSString stringWithFormat:@"【KVC】[<%@ %p> setValue:forUndefinedKey:]: this class is not key value coding-compliant for the key: %@,value:%@'.",NSStringFromClass([self class]),self,key,value];
         [SFCrachInspector log:msg];
     }
 }
@@ -51,7 +51,7 @@
 - (nullable id)valueForUndefinedKey:(NSString *)key {
     BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionKVC];
     if (isOpen) {
-        NSString *msg = [NSString stringWithFormat:@"[<%@ %p> valueForUndefinedKey:]: this class is not key value coding-compliant for the key: %@.",NSStringFromClass([self class]),self,key];
+        NSString *msg = [NSString stringWithFormat:@"【KVC】[<%@ %p> valueForUndefinedKey:]: this class is not key value coding-compliant for the key: %@.",NSStringFromClass([self class]),self,key];
         [SFCrachInspector log:msg];
     }
     return self;

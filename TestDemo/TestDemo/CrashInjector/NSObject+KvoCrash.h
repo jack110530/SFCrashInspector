@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (KvoCrash)
-- (void)sf_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(void *)context;
+- (void)sf_removeObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath context:(nullable void *)context;
 @end
 
 NS_ASSUME_NONNULL_END
