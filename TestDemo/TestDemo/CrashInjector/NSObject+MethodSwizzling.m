@@ -36,17 +36,21 @@ void swizzlingMethod(Class class, BOOL isMetaClass, SEL originalSel, SEL swizzle
         NSLog(@"方法交换失败 originalMethod：%@，swizzledMethod：%@", originalMethod, swizzledMethod);
         return;
     }
-    BOOL didAddMethod = class_addMethod(class,
-                                         originalSel,
-                                         method_getImplementation(swizzledMethod),
-                                         method_getTypeEncoding(swizzledMethod));
-    if (didAddMethod) {
-        class_replaceMethod(class,
-                            swizzledSel,
-                            method_getImplementation(originalMethod),
-                            method_getTypeEncoding(originalMethod));
-    }else{
+    if (isMetaClass) {
         method_exchangeImplementations(originalMethod, swizzledMethod);
+    }else{
+        BOOL didAddMethod = class_addMethod(class,
+                                             originalSel,
+                                             method_getImplementation(swizzledMethod),
+                                             method_getTypeEncoding(swizzledMethod));
+        if (didAddMethod) {
+            class_replaceMethod(class,
+                                swizzledSel,
+                                method_getImplementation(originalMethod),
+                                method_getTypeEncoding(originalMethod));
+        }else{
+            method_exchangeImplementations(originalMethod, swizzledMethod);
+        }
     }
 }
 

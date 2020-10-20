@@ -7,7 +7,6 @@
 //
 
 #import "TimerCrashTestVC.h"
-#import "SFTimerProxy.h"
 
 @interface TimerCrashTestVC ()
 @property (nonatomic, strong) NSTimer *timer;
@@ -22,8 +21,7 @@
                         @"防止target释放掉后，timer还在执行"];
     [self addBtnsWithTitles:titles];
     
-    SFTimerProxy *proxy = [SFTimerProxy proxyWithTarget:self aSelector:@selector(timerEvent)];
-    self.timer = [NSTimer timerWithTimeInterval:1 target:proxy selector:@selector(fireProxyTimer:) userInfo:nil repeats:YES];
+    self.timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 // MARK: test
