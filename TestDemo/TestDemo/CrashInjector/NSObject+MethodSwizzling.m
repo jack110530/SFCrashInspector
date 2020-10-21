@@ -33,7 +33,7 @@ void swizzlingMethod(Class class, BOOL isMetaClass, SEL originalSel, SEL swizzle
         swizzledMethod = class_getInstanceMethod(class, swizzledSel);
     }
     if (!originalMethod || !swizzledMethod) {
-        NSLog(@"方法交换失败 originalMethod：%@，swizzledMethod：%@", originalMethod, swizzledMethod);
+        NSLog(@"【Class】：%@中，方法交换失败 \n【originalSel】：%@ \n【swizzledSel】：%@ \n", class, NSStringFromSelector(originalSel), NSStringFromSelector(swizzledSel));
         return;
     }
     if (isMetaClass) {

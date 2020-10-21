@@ -15,6 +15,7 @@
 		51189FE7253EC00200FE282A /* SFTimerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189FE6253EC00200FE282A /* SFTimerProxy.m */; };
 		51189FEE253EC3A300FE282A /* TimerCrashTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 51189FED253EC3A200FE282A /* TimerCrashTestVC.m */; };
 		5151C2EF253552B800E5D683 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5151C2EE253552B800E5D683 /* ExternalAccessory.framework */; };
+		517C08D5254079C400CBC3B6 /* CADisplayLink+TimerCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 517C08D4254079C400CBC3B6 /* CADisplayLink+TimerCrash.m */; };
 		5189E6842539842400A8262A /* NSObject+SelectorCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6832539842400A8262A /* NSObject+SelectorCrash.m */; };
 		5189E6932539875800A8262A /* NSObject+KvcCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6922539875800A8262A /* NSObject+KvcCrash.m */; };
 		5189E69C2539891600A8262A /* SelectorCrashTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E69B2539891600A8262A /* SelectorCrashTestVC.m */; };
@@ -67,6 +68,8 @@
 		51189FEC253EC3A200FE282A /* TimerCrashTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerCrashTestVC.h; sourceTree = "<group>"; };
 		51189FED253EC3A200FE282A /* TimerCrashTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerCrashTestVC.m; sourceTree = "<group>"; };
 		5151C2EE253552B800E5D683 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		517C08D3254079C400CBC3B6 /* CADisplayLink+TimerCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CADisplayLink+TimerCrash.h"; sourceTree = "<group>"; };
+		517C08D4254079C400CBC3B6 /* CADisplayLink+TimerCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CADisplayLink+TimerCrash.m"; sourceTree = "<group>"; };
 		5189E6822539842400A8262A /* NSObject+SelectorCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+SelectorCrash.h"; sourceTree = "<group>"; };
 		5189E6832539842400A8262A /* NSObject+SelectorCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SelectorCrash.m"; sourceTree = "<group>"; };
 		5189E6912539875800A8262A /* NSObject+KvcCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+KvcCrash.h"; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				51189FA9253D63E600FE282A /* NSObject+KvoCrash.m */,
 				51189FDF253EBA9A00FE282A /* NSTimer+TimerCrash.h */,
 				51189FE0253EBA9A00FE282A /* NSTimer+TimerCrash.m */,
+				517C08D3254079C400CBC3B6 /* CADisplayLink+TimerCrash.h */,
+				517C08D4254079C400CBC3B6 /* CADisplayLink+TimerCrash.m */,
 				51189FD9253EBA1F00FE282A /* SFProxy.h */,
 				51189FDA253EBA1F00FE282A /* SFProxy.m */,
 				51189FE5253EC00200FE282A /* SFTimerProxy.h */,
@@ -420,6 +425,7 @@
 				51FFD4BB251B274A0065BFB4 /* main.m in Sources */,
 				51FFD4AD251B27460065BFB4 /* SceneDelegate.m in Sources */,
 				5189E69C2539891600A8262A /* SelectorCrashTestVC.m in Sources */,
+				517C08D5254079C400CBC3B6 /* CADisplayLink+TimerCrash.m in Sources */,
 				51189FDB253EBA1F00FE282A /* SFProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,7 @@
 //
 
 #import "SFProxy.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithTarget:(id)target aSelector:(SEL)aSelector;
 + (instancetype)proxyWithTarget:(id)target aSelector:(SEL)aSelector;
 - (void)fireProxyTimer:(NSTimer *)timer;
+- (void)fireProxyDisplayLink:(CADisplayLink *)displayLink;
 @end
 
 NS_ASSUME_NONNULL_END

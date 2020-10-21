@@ -10,6 +10,7 @@
 
 @interface TimerCrashTestVC ()
 @property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, strong) CADisplayLink *displayLink;
 @end
 
 @implementation TimerCrashTestVC
@@ -21,8 +22,12 @@
                         @"防止target释放掉后，timer还在执行"];
     [self addBtnsWithTitles:titles];
     
-    self.timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+//    self.timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
+//    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    
+    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(timerEvent)];
+    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+
 }
 // MARK: test
 - (void)test0 {

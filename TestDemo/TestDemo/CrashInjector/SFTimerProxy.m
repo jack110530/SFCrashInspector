@@ -8,6 +8,7 @@
 
 #import "SFTimerProxy.h"
 
+
 @implementation SFTimerProxy
 {
     SEL _aSelector;
@@ -29,6 +30,16 @@
     }else{
         [timer invalidate];
         timer = nil;
+    }
+}
+- (void)fireProxyDisplayLink:(CADisplayLink *)displayLink {
+    if (self.target) {
+        if ([self.target respondsToSelector:_aSelector]) {
+            [self.target performSelector:_aSelector withObject:displayLink];
+        }
+    }else{
+        [displayLink invalidate];
+        displayLink = nil;
     }
 }
 
