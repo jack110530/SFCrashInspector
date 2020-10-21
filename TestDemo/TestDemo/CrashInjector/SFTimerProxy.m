@@ -7,7 +7,6 @@
 //
 
 #import "SFTimerProxy.h"
-#import "NSObject+MethodSwizzling.h"
 
 @implementation SFTimerProxy
 {

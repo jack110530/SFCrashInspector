@@ -11,7 +11,6 @@
 #import "SFCrachInspector.h"
 #import "SFTimerProxy.h"
 
-
 @implementation NSTimer (TimerCrash)
 
 + (void)load {
@@ -34,6 +33,7 @@
     }
     return [self sf_timerWithTimeInterval:ti target:aTarget selector:aSelector userInfo:userInfo repeats:yesOrNo];
 }
+
 + (NSTimer *)sf_scheduledTimerWithTimeInterval:(NSTimeInterval)ti target:(id)aTarget selector:(SEL)aSelector userInfo:(nullable id)userInfo repeats:(BOOL)yesOrNo {
     BOOL isOpen = [SFCrachInspector checkIsOpenWithOption:SFCrashInspectorOptionTimer];
     if (isOpen && !isSystemClass([aTarget class])) {
@@ -42,6 +42,5 @@
     }
     return [self sf_scheduledTimerWithTimeInterval:ti target:aTarget selector:aSelector userInfo:userInfo repeats:yesOrNo];
 }
-
 
 @end

@@ -38,6 +38,8 @@
 
 - (void)dealloc {
     NSLog(@"%s", __func__);
+    //[self.timer invalidate];
+    //self.timer = nil;
 }
 
 @end
