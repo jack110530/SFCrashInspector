@@ -8,7 +8,6 @@
 
 #import "SFTimerProxy.h"
 
-
 @implementation SFTimerProxy
 {
     SEL _aSelector;
@@ -40,6 +39,27 @@
     }else{
         [displayLink invalidate];
         displayLink = nil;
+    }
+}
+- (void)fireProxyGcdTimer:(SFGcdTimer *)timer {
+    if (self.target) {
+        if ([self.target respondsToSelector:_aSelector]) {
+            [self.target performSelector:_aSelector withObject:timer];
+        }
+    }else{
+        [timer invalidate];
+        timer = nil;
+    }
+}
+
+// 设置白名单
+- (BOOL)respondsToSelector:(SEL)aSelector {
+    if (aSelector == @selector(fireProxyTimer:)
+        || aSelector == @selector(fireProxyDisplayLink:)
+        || aSelector == @selector(fireProxyGcdTimer:)) {
+        return YES;
+    }else{
+        return [super respondsToSelector:aSelector];
     }
 }
 

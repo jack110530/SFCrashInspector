@@ -22,6 +22,8 @@
 		5189E6A525398CCD00A8262A /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6A425398CCD00A8262A /* BaseViewController.m */; };
 		5189E6AE2539903D00A8262A /* KvcCrashTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6AD2539903D00A8262A /* KvcCrashTestVC.m */; };
 		5189E6B42539924500A8262A /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 5189E6B32539924500A8262A /* Animal.m */; };
+		51D5A26C2541365600797C11 /* SFGcdTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D5A26B2541365600797C11 /* SFGcdTimer.m */; };
+		51D5A2722541369100797C11 /* SFGcdTimer+TimerCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D5A2712541369100797C11 /* SFGcdTimer+TimerCrash.m */; };
 		51E40F102536A8C700E497BB /* NSObject+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E40F0F2536A8C700E497BB /* NSObject+MethodSwizzling.m */; };
 		51E40F262536E48200E497BB /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E40F252536E48100E497BB /* Person.m */; };
 		51FFD4AA251B27460065BFB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51FFD4A9251B27460065BFB4 /* AppDelegate.m */; };
@@ -82,6 +84,10 @@
 		5189E6AD2539903D00A8262A /* KvcCrashTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KvcCrashTestVC.m; sourceTree = "<group>"; };
 		5189E6B22539924500A8262A /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
 		5189E6B32539924500A8262A /* Animal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		51D5A26A2541365600797C11 /* SFGcdTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFGcdTimer.h; sourceTree = "<group>"; };
+		51D5A26B2541365600797C11 /* SFGcdTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFGcdTimer.m; sourceTree = "<group>"; };
+		51D5A2702541369100797C11 /* SFGcdTimer+TimerCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SFGcdTimer+TimerCrash.h"; sourceTree = "<group>"; };
+		51D5A2712541369100797C11 /* SFGcdTimer+TimerCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SFGcdTimer+TimerCrash.m"; sourceTree = "<group>"; };
 		51E40F0E2536A8C700E497BB /* NSObject+MethodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodSwizzling.h"; sourceTree = "<group>"; };
 		51E40F0F2536A8C700E497BB /* NSObject+MethodSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodSwizzling.m"; sourceTree = "<group>"; };
 		51E40F242536E48100E497BB /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -208,6 +214,10 @@
 				51189FE0253EBA9A00FE282A /* NSTimer+TimerCrash.m */,
 				517C08D3254079C400CBC3B6 /* CADisplayLink+TimerCrash.h */,
 				517C08D4254079C400CBC3B6 /* CADisplayLink+TimerCrash.m */,
+				51D5A2702541369100797C11 /* SFGcdTimer+TimerCrash.h */,
+				51D5A2712541369100797C11 /* SFGcdTimer+TimerCrash.m */,
+				51D5A26A2541365600797C11 /* SFGcdTimer.h */,
+				51D5A26B2541365600797C11 /* SFGcdTimer.m */,
 				51189FD9253EBA1F00FE282A /* SFProxy.h */,
 				51189FDA253EBA1F00FE282A /* SFProxy.m */,
 				51189FE5253EC00200FE282A /* SFTimerProxy.h */,
@@ -419,6 +429,8 @@
 				51FFD4B0251B27460065BFB4 /* ViewController.m in Sources */,
 				5189E6932539875800A8262A /* NSObject+KvcCrash.m in Sources */,
 				51189FB1253D641C00FE282A /* KvoCrashTestVC.m in Sources */,
+				51D5A26C2541365600797C11 /* SFGcdTimer.m in Sources */,
+				51D5A2722541369100797C11 /* SFGcdTimer+TimerCrash.m in Sources */,
 				51E40F262536E48200E497BB /* Person.m in Sources */,
 				5189E6B42539924500A8262A /* Animal.m in Sources */,
 				51FFD4AA251B27460065BFB4 /* AppDelegate.m in Sources */,

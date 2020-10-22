@@ -7,10 +7,12 @@
 //
 
 #import "TimerCrashTestVC.h"
+#import "SFGcdTimer.h"
 
 @interface TimerCrashTestVC ()
 @property (nonatomic, strong) NSTimer *timer;
 @property (nonatomic, strong) CADisplayLink *displayLink;
+@property (nonatomic, strong) SFGcdTimer *gcdTimer;
 @end
 
 @implementation TimerCrashTestVC
@@ -25,8 +27,11 @@
 //    self.timer = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
 //    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
-    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(timerEvent)];
-    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+//    self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(timerEvent)];
+//    [self.displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    
+    self.gcdTimer = [SFGcdTimer timerWithTimeInterval:1 delay:0 target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
+    [self.gcdTimer fire];
 
 }
 // MARK: test
