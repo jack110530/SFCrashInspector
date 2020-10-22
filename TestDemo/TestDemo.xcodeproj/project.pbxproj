@@ -88,6 +88,7 @@
 		51D5A26B2541365600797C11 /* SFGcdTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SFGcdTimer.m; sourceTree = "<group>"; };
 		51D5A2702541369100797C11 /* SFGcdTimer+TimerCrash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SFGcdTimer+TimerCrash.h"; sourceTree = "<group>"; };
 		51D5A2712541369100797C11 /* SFGcdTimer+TimerCrash.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SFGcdTimer+TimerCrash.m"; sourceTree = "<group>"; };
+		51D5A2832541541600797C11 /* SFCrashInspectorFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SFCrashInspectorFunc.h; sourceTree = "<group>"; };
 		51E40F0E2536A8C700E497BB /* NSObject+MethodSwizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MethodSwizzling.h"; sourceTree = "<group>"; };
 		51E40F0F2536A8C700E497BB /* NSObject+MethodSwizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MethodSwizzling.m"; sourceTree = "<group>"; };
 		51E40F242536E48100E497BB /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
@@ -202,6 +203,7 @@
 			children = (
 				51189F89253D308B00FE282A /* SFCrachInspector.h */,
 				51189F8A253D308B00FE282A /* SFCrachInspector.m */,
+				51D5A2832541541600797C11 /* SFCrashInspectorFunc.h */,
 				51E40F0E2536A8C700E497BB /* NSObject+MethodSwizzling.h */,
 				51E40F0F2536A8C700E497BB /* NSObject+MethodSwizzling.m */,
 				5189E6822539842400A8262A /* NSObject+SelectorCrash.h */,

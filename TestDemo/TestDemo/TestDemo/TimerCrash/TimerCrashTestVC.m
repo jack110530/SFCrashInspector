@@ -32,7 +32,7 @@
     
     self.gcdTimer = [SFGcdTimer timerWithTimeInterval:1 delay:0 target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
     [self.gcdTimer fire];
-
+    
 }
 // MARK: test
 - (void)test0 {

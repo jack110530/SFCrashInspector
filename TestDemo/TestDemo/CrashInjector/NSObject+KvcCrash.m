@@ -7,6 +7,7 @@
 //
 
 #import "NSObject+KvcCrash.h"
+#import "SFCrashInspectorFunc.h"
 #import "NSObject+MethodSwizzling.h"
 #import "SFCrachInspector.h"
 

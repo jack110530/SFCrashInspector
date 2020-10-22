@@ -7,6 +7,7 @@
 //
 
 #import "NSTimer+TimerCrash.h"
+#import "SFCrashInspectorFunc.h"
 #import "NSObject+MethodSwizzling.h"
 #import "SFCrachInspector.h"
 #import "SFTimerProxy.h"
