@@ -1,0 +1,6 @@
+framework module Pods_SFCrashInspector_Tests {
+  umbrella header "Pods-SFCrashInspector_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

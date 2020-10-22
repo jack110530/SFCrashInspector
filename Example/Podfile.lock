@@ -1,0 +1,27 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - SFCrashInspector (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - SFCrashInspector (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  SFCrashInspector:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  SFCrashInspector: b89568cbbb18d9318984911789dacde5efa02236
+
+PODFILE CHECKSUM: 30fa3186e325b1884d37d4b2119ba22b33055db2
+
+COCOAPODS: 1.9.3

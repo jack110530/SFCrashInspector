@@ -1,0 +1,6 @@
+framework module SFCrashInspector {
+  umbrella header "SFCrashInspector-umbrella.h"
+
+  export *
+  module * { export * }
+}
