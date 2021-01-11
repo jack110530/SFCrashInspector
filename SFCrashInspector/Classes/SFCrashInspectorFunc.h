@@ -34,11 +34,12 @@ static inline BOOL isSystemClass(Class cls) {
         isSystem = YES;
         return isSystem;
     }
-    NSBundle *mainBundle = [NSBundle bundleForClass:cls];
-    if (mainBundle == [NSBundle mainBundle]) {
-        isSystem = NO;
-    }else{
+    NSBundle *systemBundle = [NSBundle bundleForClass:[UIView class]];
+    NSBundle *customBundle = [NSBundle bundleForClass:cls];
+    if (customBundle == systemBundle) {
         isSystem = YES;
+    }else{
+        isSystem = NO;
     }
     return isSystem;
 }
