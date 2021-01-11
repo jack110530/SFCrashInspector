@@ -22,7 +22,7 @@ pod 'SFCrashInspector'
 
 ## Author
 
-hsfiOSGitHub, hsf_ios@sina.com
+jack110530, jack110530@163.com
 
 ## License
 

@@ -295,45 +295,43 @@
 
 - (void)removeUselessKvo {
     @autoreleasepool {
-        if (!isSystemClass(self.class)) {
-            BOOL isKvoTag = ([self.kvoTag isEqualToString:SF_VALUE_KVOTAG_OBSERVER] || [self.kvoTag isEqualToString:SF_VALUE_KVOTAG_OBSERVED]);
-            if (isKvoTag) {
-                BOOL isOpen = [SFCrashInspectorManager checkIsOpenWithOption:SFCrashInspectorOptionKVO];
-                if (isOpen) {
-                    if ([self.kvoTag isEqualToString:SF_VALUE_KVOTAG_OBSERVER]) {
-                        // 当前正在dealloc的是观察者
-                        // 由于「不知道为什么这两个对象地址明明是一样的，为啥就不进if里面」的问题（搜索一下就知道了）
-                        // 这种情况的解决方案放在了kvoProxy的observeValueForKeyPath:ofObject:change:context:方法中进行处理(推后处理)
-                        NSObject *observed = self.kvoProxy.observed;
-                        NSObject *observer = self;
-                        //SFKvoProxy *kvoProxy = observed.kvoProxy;
-                        if (observed) {
-                            NSMutableString *msg = [NSMutableString stringWithFormat:@"【KVO】观察者正在dealloc时，移除被观察者：%@ 和当前观察者：%@ 之间注册的所有KVO\n", observed, observer];
+        BOOL isKvoTag = ([self.kvoTag isEqualToString:SF_VALUE_KVOTAG_OBSERVER] || [self.kvoTag isEqualToString:SF_VALUE_KVOTAG_OBSERVED]);
+        if (isKvoTag) {
+            BOOL isOpen = [SFCrashInspectorManager checkIsOpenWithOption:SFCrashInspectorOptionKVO];
+            if (isOpen && !isSystemClass(self.class)) {
+                if ([self.kvoTag isEqualToString:SF_VALUE_KVOTAG_OBSERVER]) {
+                    // 当前正在dealloc的是观察者
+                    // 由于「不知道为什么这两个对象地址明明是一样的，为啥就不进if里面」的问题（搜索一下就知道了）
+                    // 这种情况的解决方案放在了kvoProxy的observeValueForKeyPath:ofObject:change:context:方法中进行处理(推后处理)
+                    NSObject *observed = self.kvoProxy.observed;
+                    NSObject *observer = self;
+                    //SFKvoProxy *kvoProxy = observed.kvoProxy;
+                    if (observed) {
+                        NSMutableString *msg = [NSMutableString stringWithFormat:@"【KVO】观察者正在dealloc时，移除被观察者：%@ 和当前观察者：%@ 之间注册的所有KVO\n", observed, observer];
 //                            NSSet *infoSet = [kvoProxy getInfoSetWithObserver:observer];
 //                            for (SFKovInfo *info in infoSet) {
 //                                [observed removeObserver:observer forKeyPath:info->_keyPath context:info->_context?:NULL];
 //                                NSString *str = [NSString stringWithFormat:@"移除keyPath：%@，context：%@\n", info->_keyPath, info->_context?:NULL];
 //                                [msg appendString:str];
 //                            }
-                            [SFCrashInspectorManager log:msg];
-                        }
+                        [SFCrashInspectorManager log:msg];
                     }
-                    else {
-                        // 当前正在dealloc的是被观察者
-                        NSObject *observed = self;
-                        SFKvoProxy *kvoProxy = observed.kvoProxy;
-                        NSSet<SFKovInfo *> *infoSet =  [kvoProxy getAllInfoSet];
-                        if (infoSet.count > 0) {
-                            NSMutableString *msg = [NSMutableString stringWithFormat:@"【KVO】被观察者正在dealloc时，移除被观察者：%@ 和当前观察者之间注册的所有KVO（共%ld个）\n", observed, infoSet.count];
-                            NSInteger idx = 0;
-                            for (SFKovInfo *info in infoSet) {
-                                idx++;
-                                [self removeObserver:kvoProxy forKeyPath:info->_keyPath context:info->_context];
-                                NSString *str = [NSString stringWithFormat:@" %ld）移除和观察者%@之间的KVO，keyPath：%@，context：%@\n", idx, info->_observer, info->_keyPath, info->_context?:NULL];
-                                [msg appendString:str];
-                            }
-                            [SFCrashInspectorManager log:msg];
+                }
+                else {
+                    // 当前正在dealloc的是被观察者
+                    NSObject *observed = self;
+                    SFKvoProxy *kvoProxy = observed.kvoProxy;
+                    NSSet<SFKovInfo *> *infoSet =  [kvoProxy getAllInfoSet];
+                    if (infoSet.count > 0) {
+                        NSMutableString *msg = [NSMutableString stringWithFormat:@"【KVO】被观察者正在dealloc时，移除被观察者：%@ 和当前观察者之间注册的所有KVO（共%ld个）\n", observed, infoSet.count];
+                        NSInteger idx = 0;
+                        for (SFKovInfo *info in infoSet) {
+                            idx++;
+                            [self removeObserver:kvoProxy forKeyPath:info->_keyPath context:info->_context];
+                            NSString *str = [NSString stringWithFormat:@" %ld）移除和观察者%@之间的KVO，keyPath：%@，context：%@\n", idx, info->_observer, info->_keyPath, info->_context?:NULL];
+                            [msg appendString:str];
                         }
+                        [SFCrashInspectorManager log:msg];
                     }
                 }
             }
