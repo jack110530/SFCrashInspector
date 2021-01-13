@@ -10,13 +10,13 @@
 #endif
 #endif
 
+#import "SFCrachInspector.h"
 #import "CADisplayLink+TimerCrash.h"
 #import "NSObject+KvcCrash.h"
 #import "NSObject+KvoCrash.h"
 #import "NSObject+MethodSwizzling.h"
 #import "NSObject+SelectorCrash.h"
 #import "NSTimer+TimerCrash.h"
-#import "SFCrachInspector.h"
 #import "SFCrashInspectorFunc.h"
 #import "SFCrashInspectorManager.h"
 #import "SFGcdTimer+TimerCrash.h"
