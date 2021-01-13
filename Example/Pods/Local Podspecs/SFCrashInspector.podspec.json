@@ -18,6 +18,12 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "SFCrashInspector/Classes/**/*",
-  "public_header_files": "Pod/Classes/SFCrachInspector.h"
+  "source_files": "SFCrashInspector/Classes/SFCrashInspector.h",
+  "public_header_files": "Pod/Classes/SFCrachInspector.h",
+  "subspecs": [
+    {
+      "name": "SFCrashInspector",
+      "source_files": "SFCrashInspector/Classes/SFCrashInspector/*.{h,m}"
+    }
+  ]
 }

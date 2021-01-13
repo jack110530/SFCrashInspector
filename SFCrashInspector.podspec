@@ -30,7 +30,13 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SFCrashInspector/Classes/**/*'
+  s.source_files = 'SFCrashInspector/Classes/SFCrashInspector.h'
+  s.public_header_files = 'SFCrashInspector/Classes/SFCrashInspector.h'
+  
+  # SFCrashInspector
+  s.subspec 'SFCrashInspector' do |ss|
+    ss.source_files = 'SFCrashInspector/Classes/SFCrashInspector/*.{h,m}'
+  end
   
   # s.resource_bundles = {
   #   'SFCrashInspector' => ['SFCrashInspector/Assets/*.png']

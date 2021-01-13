@@ -7,7 +7,7 @@
 //
 
 #import "SFAppDelegate.h"
-#import <SFCrashInspector/SFCrachInspector.h>
+#import <SFCrashInspector/SFCrashInspector.h>
 
 @implementation SFAppDelegate
 

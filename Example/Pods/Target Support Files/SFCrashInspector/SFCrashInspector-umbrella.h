@@ -10,7 +10,7 @@
 #endif
 #endif
 
-#import "SFCrachInspector.h"
+#import "SFCrashInspector.h"
 #import "CADisplayLink+TimerCrash.h"
 #import "NSObject+KvcCrash.h"
 #import "NSObject+KvoCrash.h"
