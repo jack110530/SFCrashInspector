@@ -19,7 +19,7 @@
     dispatch_once(&onceToken, ^{
         
         // 交换initWithTimeInterval:delay:target:selector:userInfo:repeats:queue:方法
-        [NSObject sf_swizzlingInstanceMethod:@selector(initWithTimeInterval:delay:target:selector:userInfo:repeats:queue:) swizzledMethod:@selector(sf_initWithTimeInterval:delay:target:selector:userInfo:repeats:queue:) withClass:[SFGcdTimer class]];
+        [NSObject sf_swizzleInstanceMethod:@selector(initWithTimeInterval:delay:target:selector:userInfo:repeats:queue:) swizzledMethod:@selector(sf_initWithTimeInterval:delay:target:selector:userInfo:repeats:queue:) withClass:[SFGcdTimer class]];
         
     });
 }

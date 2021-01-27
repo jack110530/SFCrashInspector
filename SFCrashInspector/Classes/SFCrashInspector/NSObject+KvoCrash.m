@@ -210,20 +210,20 @@
     dispatch_once(&onceToken, ^{
 
         // 交换addObserver:forKeyPath:options:context:方法
-        [NSObject sf_swizzlingInstanceMethod:@selector(addObserver:forKeyPath:options:context:) swizzledMethod:@selector(sf_addObserver:forKeyPath:options:context:) withClass:[NSObject class]];
+        [NSObject sf_swizzleInstanceMethod:@selector(addObserver:forKeyPath:options:context:) swizzledMethod:@selector(sf_addObserver:forKeyPath:options:context:) withClass:[NSObject class]];
 
         // 交换removeObserver:forKeyPath:context:方法
-        [NSObject sf_swizzlingInstanceMethod:@selector(removeObserver:forKeyPath:context:) swizzledMethod:@selector(sf_removeObserver:forKeyPath:context:) withClass:[NSObject class]];
+        [NSObject sf_swizzleInstanceMethod:@selector(removeObserver:forKeyPath:context:) swizzledMethod:@selector(sf_removeObserver:forKeyPath:context:) withClass:[NSObject class]];
 
         /**
          * 由于调用removeObserver:forKeyPath:context:方法时，默认会调用removeObserver:forKeyPath:方法，会导致打印出错。
          * 故在使用移除观察者方法时，推荐使用removeObserver:forKeyPath:context:方法，避免使用removeObserver:forKeyPath:方法。
          */
 //        // 交换removeObserver:forKeyPath:方法
-//        [NSObject sf_swizzlingInstanceMethod:@selector(removeObserver:forKeyPath:) swizzledMethod:@selector(sf_removeObserver:forKeyPath:) withClass:[NSObject class]];
+//        [NSObject sf_swizzleInstanceMethod:@selector(removeObserver:forKeyPath:) swizzledMethod:@selector(sf_removeObserver:forKeyPath:) withClass:[NSObject class]];
 
         // 交换dealloc方法
-        [NSObject sf_swizzlingInstanceMethod:NSSelectorFromString(@"dealloc") swizzledMethod:@selector(sf_dealloc) withClass:[NSObject class]];
+        [NSObject sf_swizzleInstanceMethod:NSSelectorFromString(@"dealloc") swizzledMethod:@selector(sf_dealloc) withClass:[NSObject class]];
 
     });
 }

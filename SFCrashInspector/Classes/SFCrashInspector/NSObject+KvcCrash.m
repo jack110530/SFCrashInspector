@@ -17,7 +17,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // 交换setValue:forKey:方法(实例方法和对象方法)
-        [NSObject sf_swizzlingInstanceMethod:@selector(setValue:forKey:) swizzledMethod:@selector(sf_setValue:forKey:) withClass:[NSObject class]];
+        [NSObject sf_swizzleInstanceMethod:@selector(setValue:forKey:) swizzledMethod:@selector(sf_setValue:forKey:) withClass:[NSObject class]];
     });
 }
 

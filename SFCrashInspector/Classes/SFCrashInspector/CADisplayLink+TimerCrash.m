@@ -19,7 +19,7 @@
     dispatch_once(&onceToken, ^{
         
         // 交换displayLinkWithTarget:selector:方法
-        [NSObject sf_swizzlingClassMethod:@selector(displayLinkWithTarget:selector:) swizzledMethod:@selector(sf_displayLinkWithTarget:selector:) withClass:[CADisplayLink class]];
+        [NSObject sf_swizzleClassMethod:@selector(displayLinkWithTarget:selector:) swizzledMethod:@selector(sf_displayLinkWithTarget:selector:) withClass:[CADisplayLink class]];
         
     });
 }

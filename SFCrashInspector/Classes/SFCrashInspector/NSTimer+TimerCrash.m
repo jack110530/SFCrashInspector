@@ -19,10 +19,10 @@
     dispatch_once(&onceToken, ^{
         
         // 交换timerWithTimeInterval:target:selector:userInfo:repeats:方法
-        [NSObject sf_swizzlingClassMethod:@selector(timerWithTimeInterval:target:selector:userInfo:repeats:) swizzledMethod:@selector(sf_timerWithTimeInterval:target:selector:userInfo:repeats:) withClass:[NSTimer class]];
+        [NSObject sf_swizzleClassMethod:@selector(timerWithTimeInterval:target:selector:userInfo:repeats:) swizzledMethod:@selector(sf_timerWithTimeInterval:target:selector:userInfo:repeats:) withClass:[NSTimer class]];
         
         // 交换scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:方法
-        [NSObject sf_swizzlingClassMethod:@selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:) swizzledMethod:@selector(sf_scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:) withClass:[NSTimer class]];
+        [NSObject sf_swizzleClassMethod:@selector(scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:) swizzledMethod:@selector(sf_scheduledTimerWithTimeInterval:target:selector:userInfo:repeats:) withClass:[NSTimer class]];
     });
 }
 

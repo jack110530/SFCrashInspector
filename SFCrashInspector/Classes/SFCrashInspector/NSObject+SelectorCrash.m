@@ -17,8 +17,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         // 交换forwardingTargetForSelector:方法(实例方法和对象方法)
-        [NSObject sf_swizzlingInstanceMethod:@selector(forwardingTargetForSelector:) swizzledMethod:@selector(sf_forwardingTargetForSelector:) withClass:[NSObject class]];
-        [NSObject sf_swizzlingClassMethod:@selector(forwardingTargetForSelector:) swizzledMethod:@selector(sf_forwardingTargetForSelector:) withClass:[NSObject class]];
+        [NSObject sf_swizzleInstanceMethod:@selector(forwardingTargetForSelector:) swizzledMethod:@selector(sf_forwardingTargetForSelector:) withClass:[NSObject class]];
+        [NSObject sf_swizzleClassMethod:@selector(forwardingTargetForSelector:) swizzledMethod:@selector(sf_forwardingTargetForSelector:) withClass:[NSObject class]];
     });
 }
 
