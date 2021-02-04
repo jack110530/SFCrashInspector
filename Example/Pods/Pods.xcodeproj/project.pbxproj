@@ -8,180 +8,174 @@
 
 /* Begin PBXBuildFile section */
 		00224C929D57F45B70E87359E719948D /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0087D20C5051BAC73C23736025BBD4EE /* SFGcdTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = E48BE452E765306EFD471CE175891C52 /* SFGcdTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		033D05E94FE39F8474AF3C72F9274BA9 /* SFCrashInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 52449BB3CE1866BB13ECA1F5CAB4DB3C /* SFCrashInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04D5D17D193B5B1BAF48709B4068C86B /* Pods-SFCrashInspector_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AF05407943CF62C739F2663AA761F47A /* Pods-SFCrashInspector_Example-dummy.m */; };
-		0884CAC7E31C0E8EB757E79B114E7962 /* SFProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = A704DF621C62D63DBB36B1861BCDF63F /* SFProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A278D13EBEB27BED15FC4C49657037C /* SFCrashInspector-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AA1A1C8ECB7418580BD3FA30F2D2FC2 /* SFCrashInspector-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		100968057072108F8D20E059DEEE9771 /* SFCrashInspectorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8B76C6141A5140B1F1A440A7E882CA /* SFCrashInspectorManager.m */; };
 		11C410135C7E89353B480AC8DE0BFB77 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */; };
+		124E2F57FF9FA010B348FBCDD4E44334 /* SFProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = D444A02670D25FA991389CD8C2A734CE /* SFProxy.m */; };
+		128F375379B509B27F53AF27CE1C6913 /* CADisplayLink+TimerCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = 202535CFEB188E8F9B23225EED1FDE60 /* CADisplayLink+TimerCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		14AD81D52FAD9CF2C065C61FB00C3B4F /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */; };
 		14C511527597E5846AB2627F791C7D8E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716A9972B9D9103B54DB950893FAF104 /* QuartzCore.framework */; };
+		1A28B9A07B3B647FF7ECE17B8AEC080C /* SFGcdTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C3CCD4D8DC2795BA15CE7B979F1900 /* SFGcdTimer.m */; };
 		1B370FB35ABBAE178C77E247730FC4D3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
-		1B947B5EB3797DD105EA4D2FB9AF04B1 /* NSObject+SelectorCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = 98544669DC562C55B9B9753E7CD2532A /* NSObject+SelectorCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1E271A4CAD39BCA0F1DED58F939C7720 /* CADisplayLink+TimerCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = 78DA9479809AE402A1D735E9013A7135 /* CADisplayLink+TimerCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21AA717EE2E8DAFD6756829E81CCF9FA /* SFTimerProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 90EA3DB8B4C1EA9391C557E5436EDF70 /* SFTimerProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28A57D5F9E50EAB04ADC44DF493F1476 /* NSObject+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2506A6AFF36FB0E28304A40BF7B09E2C /* NSObject+MethodSwizzling.m */; };
-		29D0AF7C87DA25A0A8B837E9FE832C07 /* NSObject+SelectorCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A7C6AC2000FE2100FF80E837A190858 /* NSObject+SelectorCrash.m */; };
+		241F1CD4E7F443F5C229ACF2F7EE25ED /* NSObject+KvoCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = EF1B6A7E0CE008A401A84FEBD0B78759 /* NSObject+KvoCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2D3C626B6ECE4A576BA5B0094A64A0AD /* NSObject+MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 462FDFB52063CFE16EA5BB2A8AB745CB /* NSObject+MethodSwizzling.m */; };
 		2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */; };
-		3125197AAEE225DA0F06070B73D6CCFE /* NSObject+MethodSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 670C617CD3EA1B07C9E0667F52E6B5F1 /* NSObject+MethodSwizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36F435A3FEF13766C5165F2256FD71D6 /* SFCrashInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BD0A3E9B0C59E2FE1A2F21736F01424 /* SFCrashInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DF4373EADFBCEC05F5C1FA1C96F26C8 /* SFTimerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A061E95EC1254527A133A6B4CE686E9 /* SFTimerProxy.m */; };
+		35C1603872218AD46A416B9BE122A399 /* SFCrashInspector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B16BB0ACA1105D183FF8B9A9C465AFAD /* SFCrashInspector-dummy.m */; };
 		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		41012584C57417C2332410309982A493 /* SFProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 551C695F7C058D7A9FA62F41BA716C97 /* SFProxy.m */; };
-		549F989C0A57F57E88E325DB4815F9D8 /* SFCrashInspector-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA8C1CC6F709FC12A697667AD7C887F4 /* SFCrashInspector-dummy.m */; };
-		557FC40FDE5198D976A2EFE759886FE2 /* NSObject+KvoCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = A36ABF8DB3835D5E1726F8EE89BF7064 /* NSObject+KvoCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		565482E8D2E452FC71A98A088DFBFCD8 /* CADisplayLink+TimerCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E76CDFC694B4DBAD4F3092188D69ADE /* CADisplayLink+TimerCrash.m */; };
-		58F2A4EEB040BE35C196CFDFC9339925 /* SFCrashInspectorFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = 81838AE5C34F3DC1A03CC328B9C2B3BA /* SFCrashInspectorFunc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		61B078405DD642D06C8527903D94BCDC /* SFGcdTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = C9BB07EB6D4B9079601A529AB31125FF /* SFGcdTimer.m */; };
+		40AA40929DE50D2EC44EEA60473045AD /* NullSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C7B1EA11B6F8BFE7D9501AF3A44915 /* NullSafe.m */; };
+		4ABDEFFE636DE2843A44E7D58E41A6A0 /* NSObject+KvcCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = E504977D9311981EF791F5B78A3FBC5A /* NSObject+KvcCrash.m */; };
+		6206B8A056CCFC120576345550D4A1E8 /* SFCrashInspectorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA3EF5693BA6043D33CD0B2FCA5669E /* SFCrashInspectorManager.m */; };
 		6AE239C5D116E1C06F5705699FB9EAF0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E601BD54DA9BF4071437E60125281FA /* XCTest.framework */; };
 		6D4D3F9C26ED6BC99B89B8856677A143 /* Pods-SFCrashInspector_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8A73D68D3DC817CF95F2DFFFA0A90E /* Pods-SFCrashInspector_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */; };
-		6DD9BAF8046147454DF6772208C1038B /* NSTimer+TimerCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 676B51D9C30C4755A0B7CF1662025EED /* NSTimer+TimerCrash.m */; };
-		7BE9B3F31BFC941D971FD236748EAB8E /* SFCrashInspectorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B2BDEFDB986EAAF18AEE67C9D9E83A1 /* SFCrashInspectorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7C00B311BCB91A1CFBD5AF81C291522B /* SFTimerProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7632B340700AB93A8DCC526F3B0AB2BD /* SFTimerProxy.m */; };
+		764A0038B1A9C1366C6EBA1328B727AF /* SFCrashInspectorManager.h in Headers */ = {isa = PBXBuildFile; fileRef = A89DC685C6D473B047FB46966C30BD8F /* SFCrashInspectorManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A1E6201D734B38C4680CBAB29BD7C79 /* SFCrashInspector-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DF9E0FF3E85071F242278EDFC029EA8 /* SFCrashInspector-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F271F2F0532013337C5ACF039EC6B5D /* NSObject+KvoCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = E91CFC21DB0C822B3986B536B0BF01F0 /* NSObject+KvoCrash.m */; };
 		88396E68DC05A379282F3B374F75F43C /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */; };
+		8B81BC14D87A9FBB0D99CD9FAC3EB092 /* NSObject+SelectorCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 44969C315868064E7E89C84B6CA98AEF /* NSObject+SelectorCrash.m */; };
 		8CE3BF0ACE07EA42DD5DAC871BF4B767 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */; };
 		90142C6259374E18E640396A59AD379A /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BC3C1FA7E215E2DFC3CCDF723BEB1C1 /* SFGcdTimer+TimerCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = DFBD4ACB535C0969747B720766E698B2 /* SFGcdTimer+TimerCrash.m */; };
-		9BE27BE6E0879B9A5AE334BC6D978419 /* SFGcdTimer+TimerCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = B7302E1C994CB21F87A0A9A44E01BDC1 /* SFGcdTimer+TimerCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9553EBFD6F2DCB8E529C16E68DF0F179 /* SFTimerProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = B04E6C7F7463A3F70DF262F32AF4589F /* SFTimerProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		956A45C625FD23771A12845E739C62D7 /* NSTimer+TimerCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = A0138C0A31EC76FF81405F937C0E0B93 /* NSTimer+TimerCrash.m */; };
+		986A6D3D81B6F64ECA50610DA844FD74 /* SFProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = CB9283745636B0B61732D7175A65D304 /* SFProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9D65089019D558E5A9661F2DCAD20313 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */; };
+		9E4831E364B153BF1624BFA20D1A4EC0 /* SFGcdTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = CC8AD91E9921604EC702BF31AA60AA7B /* SFGcdTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A525E29E0A8079B35B793D8A2B5FBDF2 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */; };
 		AD505F65AE9D71BE3A67667B7D6D262A /* Pods-SFCrashInspector_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F662B477B4BE493B5ACD796C74C64C /* Pods-SFCrashInspector_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B058C69EEC919DC1479EE55238CADD67 /* NSTimer+TimerCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = E2FB754065D11C3379C59EC63F51286F /* NSTimer+TimerCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B25D795BDC4F426BC01EFC911F368B81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		B74CD6E6EBEA0B642776BCB37850415D /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		B9590088CA92B5917F4F412238EE791F /* NSObject+KvcCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = 4988654D8122C1C82B8524336E8F6F3E /* NSObject+KvcCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B98E02228F21A30649799C18FEDF4C1D /* SFGcdTimer+TimerCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE7CB8D3278952CE40A6211CC404DB0 /* SFGcdTimer+TimerCrash.m */; };
+		BA3A927E6441CE585E0EFE12EE187B95 /* SFCrashInspectorFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = 69FC1F580E115CDCE8FFF118D0824F1C /* SFCrashInspectorFunc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BECE2F8F8043F5CF44F74DE6ECEE38F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		C49D52712466511E332C952834C81FE1 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C96A4116AC79F0E9A93E4B0EB3032CA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
+		CB0F5310ABA2627F0A903D2667DCB76E /* NSObject+SelectorCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = 02EC4123F2616CD8A234CF509001D5AB /* NSObject+SelectorCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC522D997741BD0C6E53D25E95D9028F /* NSObject+KvcCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = F3BF3ABC828CBA993D25987C68DC98B1 /* NSObject+KvcCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D04AAC8B22E4A4DC4F39891C4E52F251 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D2027D48AC4EACE138894B28D2002583 /* NSTimer+TimerCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = C614AAB8A8DF7CE878133E3E1C9A3E2A /* NSTimer+TimerCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D8A97D813F46718BB455A04F3D7F8DD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		E0B8D095C732352C854D365B9E5B993D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CAA89EEF1039078430D7A886477E365 /* UIKit.framework */; };
 		E32F7BB6D5B649EB9C159A04FED7CD09 /* Pods-SFCrashInspector_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48816CA1B112B5E37D9EFD0D976E0F9A /* Pods-SFCrashInspector_Tests-dummy.m */; };
 		E8AC509D18EBF21B1FEA909652A01108 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */; };
-		EBEC280DACC78A8A8E01F44CF95B32E9 /* NSObject+KvcCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = D905AD476AC35EE8CF0B16A88C53B67E /* NSObject+KvcCrash.m */; };
+		EE1B6CFF4EB62E1AE3C04BD6A67445BE /* CADisplayLink+TimerCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = C3E964A2CE1529513F01BD9DCF05E803 /* CADisplayLink+TimerCrash.m */; };
 		F1AAAE00BB32B733B238E2B4E8424506 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		F35E7848A97325AC31B91E951378418E /* SFGcdTimer+TimerCrash.h in Headers */ = {isa = PBXBuildFile; fileRef = 52DDBE046871EA4AC7F7D17670724CD8 /* SFGcdTimer+TimerCrash.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F720FAF13A108CE6901E0A8B0580E1E8 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB120DD3C3BF978A04710A5836B84B61 /* NSObject+KvoCrash.m in Sources */ = {isa = PBXBuildFile; fileRef = C397961A9E6243A475C316F8770AF4DA /* NSObject+KvoCrash.m */; };
+		FFD1714DCEB3DC75D819A3960D0A6525 /* NSObject+MethodSwizzling.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F42C77A397F92DA6B97D179F4924BD7 /* NSObject+MethodSwizzling.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		36AA6205AF9FE48783DBEB58C61ADDAC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C3CCC95DDCF5387018E95B8879D492B6;
-			remoteInfo = "Pods-SFCrashInspector_Example";
-		};
-		55167EC40089F1F9EE48847C01DCD860 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
-			remoteInfo = FBSnapshotTestCase;
-		};
-		F6473788E6476A7385A4186CB610A5E8 /* PBXContainerItemProxy */ = {
+		A8B826F89FDBE0628785D13EC6612EEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AB50C4AE2907070C6EBF0158045453A0;
 			remoteInfo = SFCrashInspector;
 		};
+		D20D15A5F30766114C9CCB899CAA9FDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98A98149697C80CEF8D5772791E92E66;
+			remoteInfo = FBSnapshotTestCase;
+		};
+		FE2A97BC7A5C1EEF016EEA35913E077F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3CCC95DDCF5387018E95B8879D492B6;
+			remoteInfo = "Pods-SFCrashInspector_Example";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02C7B1EA11B6F8BFE7D9501AF3A44915 /* NullSafe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NullSafe.m; path = SFCrashInspector/Classes/SFCrashInspector/NullSafe.m; sourceTree = "<group>"; };
+		02EC4123F2616CD8A234CF509001D5AB /* NSObject+SelectorCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+SelectorCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+SelectorCrash.h"; sourceTree = "<group>"; };
+		035CE05C37032806B2CEB13CEFADC393 /* SFCrashInspector-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFCrashInspector-prefix.pch"; sourceTree = "<group>"; };
 		0F538C426803AE34255FC6E35B408CCA /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
 		103FB759D636A353BFE06547FA5F81F7 /* Pods-SFCrashInspector_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SFCrashInspector_Example-Info.plist"; sourceTree = "<group>"; };
 		10CC4535BB3CE58598BE17AC3AB49CCB /* Pods-SFCrashInspector_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SFCrashInspector_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A061E95EC1254527A133A6B4CE686E9 /* SFTimerProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFTimerProxy.m; path = SFCrashInspector/Classes/SFCrashInspector/SFTimerProxy.m; sourceTree = "<group>"; };
 		1ADA6E655DC84D06359BD0ED5E36C783 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
+		1DF9E0FF3E85071F242278EDFC029EA8 /* SFCrashInspector-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFCrashInspector-umbrella.h"; sourceTree = "<group>"; };
+		1FF5249DC7ECE4C702F374625E30EC55 /* SFCrashInspector-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SFCrashInspector-Info.plist"; sourceTree = "<group>"; };
+		202535CFEB188E8F9B23225EED1FDE60 /* CADisplayLink+TimerCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CADisplayLink+TimerCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/CADisplayLink+TimerCrash.h"; sourceTree = "<group>"; };
 		21F39D96BEAF69E0DE5D5E6E37452078 /* SFCrashInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SFCrashInspector.framework; path = SFCrashInspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		235A78CFFA6D8B8D86CACD733531CB13 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
-		2506A6AFF36FB0E28304A40BF7B09E2C /* NSObject+MethodSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MethodSwizzling.m"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+MethodSwizzling.m"; sourceTree = "<group>"; };
 		277B6BE10C665F515606A22FD60C6DCC /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
 		284833D18C244D2B42966B6EE425AA59 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
+		29C3CCD4D8DC2795BA15CE7B979F1900 /* SFGcdTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFGcdTimer.m; path = SFCrashInspector/Classes/SFCrashInspector/SFGcdTimer.m; sourceTree = "<group>"; };
 		2EA9A50C1D9F30FDB5E044CD28501946 /* Pods-SFCrashInspector_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SFCrashInspector_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
+		44969C315868064E7E89C84B6CA98AEF /* NSObject+SelectorCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SelectorCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+SelectorCrash.m"; sourceTree = "<group>"; };
 		4568279DE47DC3AB91598E1317503995 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
+		462FDFB52063CFE16EA5BB2A8AB745CB /* NSObject+MethodSwizzling.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+MethodSwizzling.m"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+MethodSwizzling.m"; sourceTree = "<group>"; };
 		47F662B477B4BE493B5ACD796C74C64C /* Pods-SFCrashInspector_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SFCrashInspector_Example-umbrella.h"; sourceTree = "<group>"; };
 		48816CA1B112B5E37D9EFD0D976E0F9A /* Pods-SFCrashInspector_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SFCrashInspector_Tests-dummy.m"; sourceTree = "<group>"; };
-		4988654D8122C1C82B8524336E8F6F3E /* NSObject+KvcCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KvcCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+KvcCrash.h"; sourceTree = "<group>"; };
 		4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.release.xcconfig; sourceTree = "<group>"; };
-		4D15DB042560014155AB874C1BA7FF6D /* SFCrashInspector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SFCrashInspector.release.xcconfig; sourceTree = "<group>"; };
-		4E76CDFC694B4DBAD4F3092188D69ADE /* CADisplayLink+TimerCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CADisplayLink+TimerCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/CADisplayLink+TimerCrash.m"; sourceTree = "<group>"; };
-		551C695F7C058D7A9FA62F41BA716C97 /* SFProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFProxy.m; path = SFCrashInspector/Classes/SFCrashInspector/SFProxy.m; sourceTree = "<group>"; };
-		5BD0A3E9B0C59E2FE1A2F21736F01424 /* SFCrashInspector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFCrashInspector.h; path = SFCrashInspector/Classes/SFCrashInspector.h; sourceTree = "<group>"; };
+		4FA3EF5693BA6043D33CD0B2FCA5669E /* SFCrashInspectorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFCrashInspectorManager.m; path = SFCrashInspector/Classes/SFCrashInspector/SFCrashInspectorManager.m; sourceTree = "<group>"; };
+		52449BB3CE1866BB13ECA1F5CAB4DB3C /* SFCrashInspector.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFCrashInspector.h; path = SFCrashInspector/Classes/SFCrashInspector.h; sourceTree = "<group>"; };
+		52DDBE046871EA4AC7F7D17670724CD8 /* SFGcdTimer+TimerCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SFGcdTimer+TimerCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/SFGcdTimer+TimerCrash.h"; sourceTree = "<group>"; };
 		5C4F31330DFA99D699E4BDC8C3573D73 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E601BD54DA9BF4071437E60125281FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		656116C8FA5458F45D4707110C9530EC /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
-		670C617CD3EA1B07C9E0667F52E6B5F1 /* NSObject+MethodSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MethodSwizzling.h"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+MethodSwizzling.h"; sourceTree = "<group>"; };
-		676B51D9C30C4755A0B7CF1662025EED /* NSTimer+TimerCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+TimerCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/NSTimer+TimerCrash.m"; sourceTree = "<group>"; };
+		69FC1F580E115CDCE8FFF118D0824F1C /* SFCrashInspectorFunc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFCrashInspectorFunc.h; path = SFCrashInspector/Classes/SFCrashInspector/SFCrashInspectorFunc.h; sourceTree = "<group>"; };
 		6ABB3EB3CCC5BCA82F40FE8DC87BB778 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		6B2BDEFDB986EAAF18AEE67C9D9E83A1 /* SFCrashInspectorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFCrashInspectorManager.h; path = SFCrashInspector/Classes/SFCrashInspector/SFCrashInspectorManager.h; sourceTree = "<group>"; };
+		6F42C77A397F92DA6B97D179F4924BD7 /* NSObject+MethodSwizzling.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+MethodSwizzling.h"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+MethodSwizzling.h"; sourceTree = "<group>"; };
 		708691179B8A3F634750E1392E743625 /* Pods-SFCrashInspector_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SFCrashInspector_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		716A9972B9D9103B54DB950893FAF104 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		72098386C58ACE3DA345BD4F990AA3E3 /* SFCrashInspector.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SFCrashInspector.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		73CBEA296AADB73004BC1019432475BD /* Pods-SFCrashInspector_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SFCrashInspector_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7632B340700AB93A8DCC526F3B0AB2BD /* SFTimerProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFTimerProxy.m; path = SFCrashInspector/Classes/SFCrashInspector/SFTimerProxy.m; sourceTree = "<group>"; };
 		78D5110E0C5B7021A4E36935FB4E2F0D /* Pods-SFCrashInspector_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SFCrashInspector_Example.release.xcconfig"; sourceTree = "<group>"; };
-		78DA9479809AE402A1D735E9013A7135 /* CADisplayLink+TimerCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CADisplayLink+TimerCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/CADisplayLink+TimerCrash.h"; sourceTree = "<group>"; };
-		79F7C6BDB93DE49FF3A440F1E4CC5683 /* SFCrashInspector-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFCrashInspector-prefix.pch"; sourceTree = "<group>"; };
-		7A7C6AC2000FE2100FF80E837A190858 /* NSObject+SelectorCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SelectorCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+SelectorCrash.m"; sourceTree = "<group>"; };
-		7AA1A1C8ECB7418580BD3FA30F2D2FC2 /* SFCrashInspector-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SFCrashInspector-umbrella.h"; sourceTree = "<group>"; };
 		7BC0AD9CAAED56C009AB2424B0FBF9B4 /* Pods-SFCrashInspector_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SFCrashInspector_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7E1B7EA746BF6557FD565BAE12AF9198 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
-		81838AE5C34F3DC1A03CC328B9C2B3BA /* SFCrashInspectorFunc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFCrashInspectorFunc.h; path = SFCrashInspector/Classes/SFCrashInspector/SFCrashInspectorFunc.h; sourceTree = "<group>"; };
 		83AE76925160644ED5134C819976E644 /* Pods-SFCrashInspector_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SFCrashInspector_Tests.modulemap"; sourceTree = "<group>"; };
+		83BBE3C4768430C7433DB1EF42A274D0 /* SFCrashInspector.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SFCrashInspector.release.xcconfig; sourceTree = "<group>"; };
+		83F48F2A21E5DA6F7809CC40C4375FE1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		87CBE973B2088BE43AEF0DBABEF552B8 /* SFCrashInspector.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SFCrashInspector.modulemap; sourceTree = "<group>"; };
 		88B1DEEBF6316A84D7413645212492FF /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
+		8C56E3582072AE018A7F519816080E41 /* SFCrashInspector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SFCrashInspector.debug.xcconfig; sourceTree = "<group>"; };
 		8CAA89EEF1039078430D7A886477E365 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		8E5923010B02074CAA9AAF6EA02D66AA /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
-		90EA3DB8B4C1EA9391C557E5436EDF70 /* SFTimerProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFTimerProxy.h; path = SFCrashInspector/Classes/SFCrashInspector/SFTimerProxy.h; sourceTree = "<group>"; };
 		9468E867498BBAF36F9AFFE4845F8B09 /* FBSnapshotTestCase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.debug.xcconfig; sourceTree = "<group>"; };
 		96187BF3038121CC146335E9FF0B0AFF /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
-		98544669DC562C55B9B9753E7CD2532A /* NSObject+SelectorCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+SelectorCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+SelectorCrash.h"; sourceTree = "<group>"; };
 		99A67367E018411D614EC8536A8A1C5B /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
+		9BE7CB8D3278952CE40A6211CC404DB0 /* SFGcdTimer+TimerCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SFGcdTimer+TimerCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/SFGcdTimer+TimerCrash.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A36ABF8DB3835D5E1726F8EE89BF7064 /* NSObject+KvoCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KvoCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+KvoCrash.h"; sourceTree = "<group>"; };
-		A704DF621C62D63DBB36B1861BCDF63F /* SFProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFProxy.h; path = SFCrashInspector/Classes/SFCrashInspector/SFProxy.h; sourceTree = "<group>"; };
-		AB8B76C6141A5140B1F1A440A7E882CA /* SFCrashInspectorManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFCrashInspectorManager.m; path = SFCrashInspector/Classes/SFCrashInspector/SFCrashInspectorManager.m; sourceTree = "<group>"; };
+		A0138C0A31EC76FF81405F937C0E0B93 /* NSTimer+TimerCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+TimerCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/NSTimer+TimerCrash.m"; sourceTree = "<group>"; };
+		A89DC685C6D473B047FB46966C30BD8F /* SFCrashInspectorManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFCrashInspectorManager.h; path = SFCrashInspector/Classes/SFCrashInspector/SFCrashInspectorManager.h; sourceTree = "<group>"; };
 		AD8A286D42DB48E6C6AE58F6B159C351 /* Pods-SFCrashInspector_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SFCrashInspector_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		AE9FF9459FBCDC4AF88FB6B5A4CC1439 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		AF05407943CF62C739F2663AA761F47A /* Pods-SFCrashInspector_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SFCrashInspector_Example-dummy.m"; sourceTree = "<group>"; };
 		B009325EABC4A0687EC2EEF9AFF01367 /* Pods-SFCrashInspector_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SFCrashInspector_Example.modulemap"; sourceTree = "<group>"; };
+		B04E6C7F7463A3F70DF262F32AF4589F /* SFTimerProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFTimerProxy.h; path = SFCrashInspector/Classes/SFCrashInspector/SFTimerProxy.h; sourceTree = "<group>"; };
+		B16BB0ACA1105D183FF8B9A9C465AFAD /* SFCrashInspector-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SFCrashInspector-dummy.m"; sourceTree = "<group>"; };
+		B1A25083906823BC8080D395F87165A3 /* SFCrashInspector.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SFCrashInspector.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B4B26BA2E81F0D79346B93D061BF450E /* Pods-SFCrashInspector_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SFCrashInspector_Tests-Info.plist"; sourceTree = "<group>"; };
 		B4F16058E0D6C1A47D5F10639AF7C204 /* Pods-SFCrashInspector_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SFCrashInspector_Example-frameworks.sh"; sourceTree = "<group>"; };
-		B510BE38785DA57F38E1880E9F2C66C4 /* SFCrashInspector.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SFCrashInspector.modulemap; sourceTree = "<group>"; };
 		B7103CA00AED20722C5B69CA5B4F6938 /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
-		B7302E1C994CB21F87A0A9A44E01BDC1 /* SFGcdTimer+TimerCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SFGcdTimer+TimerCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/SFGcdTimer+TimerCrash.h"; sourceTree = "<group>"; };
-		C397961A9E6243A475C316F8770AF4DA /* NSObject+KvoCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KvoCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+KvoCrash.m"; sourceTree = "<group>"; };
-		C614AAB8A8DF7CE878133E3E1C9A3E2A /* NSTimer+TimerCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+TimerCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/NSTimer+TimerCrash.h"; sourceTree = "<group>"; };
-		C9BB07EB6D4B9079601A529AB31125FF /* SFGcdTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFGcdTimer.m; path = SFCrashInspector/Classes/SFCrashInspector/SFGcdTimer.m; sourceTree = "<group>"; };
+		C3E964A2CE1529513F01BD9DCF05E803 /* CADisplayLink+TimerCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "CADisplayLink+TimerCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/CADisplayLink+TimerCrash.m"; sourceTree = "<group>"; };
+		CB9283745636B0B61732D7175A65D304 /* SFProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFProxy.h; path = SFCrashInspector/Classes/SFCrashInspector/SFProxy.h; sourceTree = "<group>"; };
 		CBFF6C5FD9C3A84274A9314D3E940B6E /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		CFA0991EEB24A30968D939EF7C96CFBE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		CC8AD91E9921604EC702BF31AA60AA7B /* SFGcdTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFGcdTimer.h; path = SFCrashInspector/Classes/SFCrashInspector/SFGcdTimer.h; sourceTree = "<group>"; };
 		D0080080B1446C84825B29E3E67EBB6D /* Pods-SFCrashInspector_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SFCrashInspector_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D08CEBB9BDD9EF7A662ECFC0305C169E /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		D444A02670D25FA991389CD8C2A734CE /* SFProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SFProxy.m; path = SFCrashInspector/Classes/SFCrashInspector/SFProxy.m; sourceTree = "<group>"; };
 		D7CAD9F88E2106D9FD6CF6B32403C40F /* Pods_SFCrashInspector_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SFCrashInspector_Example.framework; path = "Pods-SFCrashInspector_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D872A3EE224412D4057C234FBC629F9C /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
-		D905AD476AC35EE8CF0B16A88C53B67E /* NSObject+KvcCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KvcCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+KvcCrash.m"; sourceTree = "<group>"; };
-		DA8C1CC6F709FC12A697667AD7C887F4 /* SFCrashInspector-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SFCrashInspector-dummy.m"; sourceTree = "<group>"; };
-		DFBD4ACB535C0969747B720766E698B2 /* SFGcdTimer+TimerCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SFGcdTimer+TimerCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/SFGcdTimer+TimerCrash.m"; sourceTree = "<group>"; };
-		E48BE452E765306EFD471CE175891C52 /* SFGcdTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SFGcdTimer.h; path = SFCrashInspector/Classes/SFCrashInspector/SFGcdTimer.h; sourceTree = "<group>"; };
+		DD0157BC5775C54EAA930980ECC0AA16 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E2FB754065D11C3379C59EC63F51286F /* NSTimer+TimerCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSTimer+TimerCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/NSTimer+TimerCrash.h"; sourceTree = "<group>"; };
+		E504977D9311981EF791F5B78A3FBC5A /* NSObject+KvcCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KvcCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+KvcCrash.m"; sourceTree = "<group>"; };
+		E91CFC21DB0C822B3986B536B0BF01F0 /* NSObject+KvoCrash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KvoCrash.m"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+KvoCrash.m"; sourceTree = "<group>"; };
 		ED8A73D68D3DC817CF95F2DFFFA0A90E /* Pods-SFCrashInspector_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SFCrashInspector_Tests-umbrella.h"; sourceTree = "<group>"; };
-		EE6588C1419EBF76AF5981312864EC0B /* SFCrashInspector-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SFCrashInspector-Info.plist"; sourceTree = "<group>"; };
+		EF1B6A7E0CE008A401A84FEBD0B78759 /* NSObject+KvoCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KvoCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+KvoCrash.h"; sourceTree = "<group>"; };
 		F15C16BCE7EAAF61DF0CF6DFEB9F9CF6 /* Pods_SFCrashInspector_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SFCrashInspector_Tests.framework; path = "Pods-SFCrashInspector_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F75152CEA46545D9770281949A5BEC7C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		F3BF3ABC828CBA993D25987C68DC98B1 /* NSObject+KvcCrash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+KvcCrash.h"; path = "SFCrashInspector/Classes/SFCrashInspector/NSObject+KvcCrash.h"; sourceTree = "<group>"; };
 		FAA00B4892F020053A41EFAFED6DF996 /* Pods-SFCrashInspector_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SFCrashInspector_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		FBD4FCEEAEFBB40F57BB1DDB40694392 /* SFCrashInspector.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SFCrashInspector.debug.xcconfig; sourceTree = "<group>"; };
 		FEE661E58CA6655B39AA49AA4C021C33 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		215BE887D19F6AC61A35CFA7932E5217 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C96A4116AC79F0E9A93E4B0EB3032CA0 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		3F8714DCD64338C0860572ACB89499A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,31 +203,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA2FD03FA42E27B3FCCEFF7CEA3428CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECE2F8F8043F5CF44F74DE6ECEE38F1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3624FBE5617CC059ABAD71F85CE67157 /* SFCrashInspector */ = {
-			isa = PBXGroup;
-			children = (
-				5BD0A3E9B0C59E2FE1A2F21736F01424 /* SFCrashInspector.h */,
-				41EBC0D0C6D200B2C776E1176FC50C4D /* Pod */,
-				5896F384CE17EE0AFC55F6B856C91219 /* SFCrashInspector */,
-				94680244305AC51CA7F26058DA68F0E9 /* Support Files */,
-			);
-			name = SFCrashInspector;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		41EBC0D0C6D200B2C776E1176FC50C4D /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				CFA0991EEB24A30968D939EF7C96CFBE /* LICENSE */,
-				F75152CEA46545D9770281949A5BEC7C /* README.md */,
-				72098386C58ACE3DA345BD4F990AA3E3 /* SFCrashInspector.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		46FD9E86C2F2B67A36FF5512701CFBB3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,36 +246,6 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		5896F384CE17EE0AFC55F6B856C91219 /* SFCrashInspector */ = {
-			isa = PBXGroup;
-			children = (
-				78DA9479809AE402A1D735E9013A7135 /* CADisplayLink+TimerCrash.h */,
-				4E76CDFC694B4DBAD4F3092188D69ADE /* CADisplayLink+TimerCrash.m */,
-				4988654D8122C1C82B8524336E8F6F3E /* NSObject+KvcCrash.h */,
-				D905AD476AC35EE8CF0B16A88C53B67E /* NSObject+KvcCrash.m */,
-				A36ABF8DB3835D5E1726F8EE89BF7064 /* NSObject+KvoCrash.h */,
-				C397961A9E6243A475C316F8770AF4DA /* NSObject+KvoCrash.m */,
-				670C617CD3EA1B07C9E0667F52E6B5F1 /* NSObject+MethodSwizzling.h */,
-				2506A6AFF36FB0E28304A40BF7B09E2C /* NSObject+MethodSwizzling.m */,
-				98544669DC562C55B9B9753E7CD2532A /* NSObject+SelectorCrash.h */,
-				7A7C6AC2000FE2100FF80E837A190858 /* NSObject+SelectorCrash.m */,
-				C614AAB8A8DF7CE878133E3E1C9A3E2A /* NSTimer+TimerCrash.h */,
-				676B51D9C30C4755A0B7CF1662025EED /* NSTimer+TimerCrash.m */,
-				81838AE5C34F3DC1A03CC328B9C2B3BA /* SFCrashInspectorFunc.h */,
-				6B2BDEFDB986EAAF18AEE67C9D9E83A1 /* SFCrashInspectorManager.h */,
-				AB8B76C6141A5140B1F1A440A7E882CA /* SFCrashInspectorManager.m */,
-				E48BE452E765306EFD471CE175891C52 /* SFGcdTimer.h */,
-				C9BB07EB6D4B9079601A529AB31125FF /* SFGcdTimer.m */,
-				B7302E1C994CB21F87A0A9A44E01BDC1 /* SFGcdTimer+TimerCrash.h */,
-				DFBD4ACB535C0969747B720766E698B2 /* SFGcdTimer+TimerCrash.m */,
-				A704DF621C62D63DBB36B1861BCDF63F /* SFProxy.h */,
-				551C695F7C058D7A9FA62F41BA716C97 /* SFProxy.m */,
-				90EA3DB8B4C1EA9391C557E5436EDF70 /* SFTimerProxy.h */,
-				7632B340700AB93A8DCC526F3B0AB2BD /* SFTimerProxy.m */,
-			);
-			name = SFCrashInspector;
-			sourceTree = "<group>";
-		};
 		5AE4964F3DBD2A5604B86726E04A69A5 /* Pods-SFCrashInspector_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,9 +275,40 @@
 		70A138E14CB82D7D41F5B0E2101CB5B5 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3624FBE5617CC059ABAD71F85CE67157 /* SFCrashInspector */,
+				C2453B4892A7CBAE655962F67B9081FF /* SFCrashInspector */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7CBC8F95D4BFFD8BC0E7DF19AED6D2C9 /* SFCrashInspector */ = {
+			isa = PBXGroup;
+			children = (
+				202535CFEB188E8F9B23225EED1FDE60 /* CADisplayLink+TimerCrash.h */,
+				C3E964A2CE1529513F01BD9DCF05E803 /* CADisplayLink+TimerCrash.m */,
+				F3BF3ABC828CBA993D25987C68DC98B1 /* NSObject+KvcCrash.h */,
+				E504977D9311981EF791F5B78A3FBC5A /* NSObject+KvcCrash.m */,
+				EF1B6A7E0CE008A401A84FEBD0B78759 /* NSObject+KvoCrash.h */,
+				E91CFC21DB0C822B3986B536B0BF01F0 /* NSObject+KvoCrash.m */,
+				6F42C77A397F92DA6B97D179F4924BD7 /* NSObject+MethodSwizzling.h */,
+				462FDFB52063CFE16EA5BB2A8AB745CB /* NSObject+MethodSwizzling.m */,
+				02EC4123F2616CD8A234CF509001D5AB /* NSObject+SelectorCrash.h */,
+				44969C315868064E7E89C84B6CA98AEF /* NSObject+SelectorCrash.m */,
+				E2FB754065D11C3379C59EC63F51286F /* NSTimer+TimerCrash.h */,
+				A0138C0A31EC76FF81405F937C0E0B93 /* NSTimer+TimerCrash.m */,
+				02C7B1EA11B6F8BFE7D9501AF3A44915 /* NullSafe.m */,
+				69FC1F580E115CDCE8FFF118D0824F1C /* SFCrashInspectorFunc.h */,
+				A89DC685C6D473B047FB46966C30BD8F /* SFCrashInspectorManager.h */,
+				4FA3EF5693BA6043D33CD0B2FCA5669E /* SFCrashInspectorManager.m */,
+				CC8AD91E9921604EC702BF31AA60AA7B /* SFGcdTimer.h */,
+				29C3CCD4D8DC2795BA15CE7B979F1900 /* SFGcdTimer.m */,
+				52DDBE046871EA4AC7F7D17670724CD8 /* SFGcdTimer+TimerCrash.h */,
+				9BE7CB8D3278952CE40A6211CC404DB0 /* SFGcdTimer+TimerCrash.m */,
+				CB9283745636B0B61732D7175A65D304 /* SFProxy.h */,
+				D444A02670D25FA991389CD8C2A734CE /* SFProxy.m */,
+				B04E6C7F7463A3F70DF262F32AF4589F /* SFTimerProxy.h */,
+				1A061E95EC1254527A133A6B4CE686E9 /* SFTimerProxy.m */,
+			);
+			name = SFCrashInspector;
 			sourceTree = "<group>";
 		};
 		7DE5752EED0A4C4A430975244947611A /* iOS */ = {
@@ -347,21 +328,6 @@
 				3F0D66CF296ABBC57EC4D0452397E235 /* SwiftSupport.swift */,
 			);
 			name = SwiftSupport;
-			sourceTree = "<group>";
-		};
-		94680244305AC51CA7F26058DA68F0E9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B510BE38785DA57F38E1880E9F2C66C4 /* SFCrashInspector.modulemap */,
-				DA8C1CC6F709FC12A697667AD7C887F4 /* SFCrashInspector-dummy.m */,
-				EE6588C1419EBF76AF5981312864EC0B /* SFCrashInspector-Info.plist */,
-				79F7C6BDB93DE49FF3A440F1E4CC5683 /* SFCrashInspector-prefix.pch */,
-				7AA1A1C8ECB7418580BD3FA30F2D2FC2 /* SFCrashInspector-umbrella.h */,
-				FBD4FCEEAEFBB40F57BB1DDB40694392 /* SFCrashInspector.debug.xcconfig */,
-				4D15DB042560014155AB874C1BA7FF6D /* SFCrashInspector.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SFCrashInspector";
 			sourceTree = "<group>";
 		};
 		9D79118C64CCDB24AED748B2A2108184 /* Pods-SFCrashInspector_Example */ = {
@@ -415,6 +381,28 @@
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
+		C2453B4892A7CBAE655962F67B9081FF /* SFCrashInspector */ = {
+			isa = PBXGroup;
+			children = (
+				52449BB3CE1866BB13ECA1F5CAB4DB3C /* SFCrashInspector.h */,
+				C6A3B9FEAE40AD7B5528FD59BBED84DE /* Pod */,
+				7CBC8F95D4BFFD8BC0E7DF19AED6D2C9 /* SFCrashInspector */,
+				EA8C6F8A13AA3BB9FADA311CBFD9AB43 /* Support Files */,
+			);
+			name = SFCrashInspector;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		C6A3B9FEAE40AD7B5528FD59BBED84DE /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				83F48F2A21E5DA6F7809CC40C4375FE1 /* LICENSE */,
+				DD0157BC5775C54EAA930980ECC0AA16 /* README.md */,
+				B1A25083906823BC8080D395F87165A3 /* SFCrashInspector.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +421,21 @@
 				BD2D60DE56CBB8C87BA07E0C1CCD0592 /* FBSnapshotTestCase */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		EA8C6F8A13AA3BB9FADA311CBFD9AB43 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				87CBE973B2088BE43AEF0DBABEF552B8 /* SFCrashInspector.modulemap */,
+				B16BB0ACA1105D183FF8B9A9C465AFAD /* SFCrashInspector-dummy.m */,
+				1FF5249DC7ECE4C702F374625E30EC55 /* SFCrashInspector-Info.plist */,
+				035CE05C37032806B2CEB13CEFADC393 /* SFCrashInspector-prefix.pch */,
+				1DF9E0FF3E85071F242278EDFC029EA8 /* SFCrashInspector-umbrella.h */,
+				8C56E3582072AE018A7F519816080E41 /* SFCrashInspector.debug.xcconfig */,
+				83BBE3C4768430C7433DB1EF42A274D0 /* SFCrashInspector.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SFCrashInspector";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,32 +464,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E9914CE9F4645DBF80656F27D26FFEB /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E271A4CAD39BCA0F1DED58F939C7720 /* CADisplayLink+TimerCrash.h in Headers */,
-				B9590088CA92B5917F4F412238EE791F /* NSObject+KvcCrash.h in Headers */,
-				557FC40FDE5198D976A2EFE759886FE2 /* NSObject+KvoCrash.h in Headers */,
-				3125197AAEE225DA0F06070B73D6CCFE /* NSObject+MethodSwizzling.h in Headers */,
-				1B947B5EB3797DD105EA4D2FB9AF04B1 /* NSObject+SelectorCrash.h in Headers */,
-				D2027D48AC4EACE138894B28D2002583 /* NSTimer+TimerCrash.h in Headers */,
-				0A278D13EBEB27BED15FC4C49657037C /* SFCrashInspector-umbrella.h in Headers */,
-				36F435A3FEF13766C5165F2256FD71D6 /* SFCrashInspector.h in Headers */,
-				58F2A4EEB040BE35C196CFDFC9339925 /* SFCrashInspectorFunc.h in Headers */,
-				7BE9B3F31BFC941D971FD236748EAB8E /* SFCrashInspectorManager.h in Headers */,
-				9BE27BE6E0879B9A5AE334BC6D978419 /* SFGcdTimer+TimerCrash.h in Headers */,
-				0087D20C5051BAC73C23736025BBD4EE /* SFGcdTimer.h in Headers */,
-				0884CAC7E31C0E8EB757E79B114E7962 /* SFProxy.h in Headers */,
-				21AA717EE2E8DAFD6756829E81CCF9FA /* SFTimerProxy.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		56C43C69743BCD7BA49409FEE66FCDCB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6D4D3F9C26ED6BC99B89B8856677A143 /* Pods-SFCrashInspector_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		838EE42B355353E9CDB81CC7079411A0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				128F375379B509B27F53AF27CE1C6913 /* CADisplayLink+TimerCrash.h in Headers */,
+				CC522D997741BD0C6E53D25E95D9028F /* NSObject+KvcCrash.h in Headers */,
+				241F1CD4E7F443F5C229ACF2F7EE25ED /* NSObject+KvoCrash.h in Headers */,
+				FFD1714DCEB3DC75D819A3960D0A6525 /* NSObject+MethodSwizzling.h in Headers */,
+				CB0F5310ABA2627F0A903D2667DCB76E /* NSObject+SelectorCrash.h in Headers */,
+				B058C69EEC919DC1479EE55238CADD67 /* NSTimer+TimerCrash.h in Headers */,
+				7A1E6201D734B38C4680CBAB29BD7C79 /* SFCrashInspector-umbrella.h in Headers */,
+				033D05E94FE39F8474AF3C72F9274BA9 /* SFCrashInspector.h in Headers */,
+				BA3A927E6441CE585E0EFE12EE187B95 /* SFCrashInspectorFunc.h in Headers */,
+				764A0038B1A9C1366C6EBA1328B727AF /* SFCrashInspectorManager.h in Headers */,
+				F35E7848A97325AC31B91E951378418E /* SFGcdTimer+TimerCrash.h in Headers */,
+				9E4831E364B153BF1624BFA20D1A4EC0 /* SFGcdTimer.h in Headers */,
+				986A6D3D81B6F64ECA50610DA844FD74 /* SFProxy.h in Headers */,
+				9553EBFD6F2DCB8E529C16E68DF0F179 /* SFTimerProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,12 +516,12 @@
 		};
 		AB50C4AE2907070C6EBF0158045453A0 /* SFCrashInspector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 586D0AC240AFF6D9545B18F5F9E480BE /* Build configuration list for PBXNativeTarget "SFCrashInspector" */;
+			buildConfigurationList = 24D75CDD9E4A1DF629FC4DD7AB598AB8 /* Build configuration list for PBXNativeTarget "SFCrashInspector" */;
 			buildPhases = (
-				4E9914CE9F4645DBF80656F27D26FFEB /* Headers */,
-				0C6EB21EEC4FA8E041EBFB4B622F05E9 /* Sources */,
-				215BE887D19F6AC61A35CFA7932E5217 /* Frameworks */,
-				2FB6CAFD1CE215DFDC1A3127903B6A0E /* Resources */,
+				838EE42B355353E9CDB81CC7079411A0 /* Headers */,
+				0164D6E5A569FA07DAA58406B8B36BE1 /* Sources */,
+				FA2FD03FA42E27B3FCCEFF7CEA3428CC /* Frameworks */,
+				A428085515A1CCB4744083CBDDEBF076 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -541,7 +544,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				5C61278D674CF963BB2859264315D589 /* PBXTargetDependency */,
+				FE83508865839D3FC5DA374CADB0758B /* PBXTargetDependency */,
 			);
 			name = "Pods-SFCrashInspector_Example";
 			productName = "Pods-SFCrashInspector_Example";
@@ -560,8 +563,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				89A60B5EC865EE30674A97269CE1C98A /* PBXTargetDependency */,
-				54E8C61ACB3F0196231AFCDD0137C2EB /* PBXTargetDependency */,
+				CCE6348BFCF5306A77D06CC708300928 /* PBXTargetDependency */,
+				CE12B86F462D13C32511F3D09BE792BA /* PBXTargetDependency */,
 			);
 			name = "Pods-SFCrashInspector_Tests";
 			productName = "Pods-SFCrashInspector_Tests";
@@ -599,13 +602,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2FB6CAFD1CE215DFDC1A3127903B6A0E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		30A0B154429EEBBA8EE795B5A4B1B816 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -627,25 +623,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A428085515A1CCB4744083CBDDEBF076 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0C6EB21EEC4FA8E041EBFB4B622F05E9 /* Sources */ = {
+		0164D6E5A569FA07DAA58406B8B36BE1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				565482E8D2E452FC71A98A088DFBFCD8 /* CADisplayLink+TimerCrash.m in Sources */,
-				EBEC280DACC78A8A8E01F44CF95B32E9 /* NSObject+KvcCrash.m in Sources */,
-				FB120DD3C3BF978A04710A5836B84B61 /* NSObject+KvoCrash.m in Sources */,
-				28A57D5F9E50EAB04ADC44DF493F1476 /* NSObject+MethodSwizzling.m in Sources */,
-				29D0AF7C87DA25A0A8B837E9FE832C07 /* NSObject+SelectorCrash.m in Sources */,
-				6DD9BAF8046147454DF6772208C1038B /* NSTimer+TimerCrash.m in Sources */,
-				549F989C0A57F57E88E325DB4815F9D8 /* SFCrashInspector-dummy.m in Sources */,
-				100968057072108F8D20E059DEEE9771 /* SFCrashInspectorManager.m in Sources */,
-				9BC3C1FA7E215E2DFC3CCDF723BEB1C1 /* SFGcdTimer+TimerCrash.m in Sources */,
-				61B078405DD642D06C8527903D94BCDC /* SFGcdTimer.m in Sources */,
-				41012584C57417C2332410309982A493 /* SFProxy.m in Sources */,
-				7C00B311BCB91A1CFBD5AF81C291522B /* SFTimerProxy.m in Sources */,
+				EE1B6CFF4EB62E1AE3C04BD6A67445BE /* CADisplayLink+TimerCrash.m in Sources */,
+				4ABDEFFE636DE2843A44E7D58E41A6A0 /* NSObject+KvcCrash.m in Sources */,
+				7F271F2F0532013337C5ACF039EC6B5D /* NSObject+KvoCrash.m in Sources */,
+				2D3C626B6ECE4A576BA5B0094A64A0AD /* NSObject+MethodSwizzling.m in Sources */,
+				8B81BC14D87A9FBB0D99CD9FAC3EB092 /* NSObject+SelectorCrash.m in Sources */,
+				956A45C625FD23771A12845E739C62D7 /* NSTimer+TimerCrash.m in Sources */,
+				40AA40929DE50D2EC44EEA60473045AD /* NullSafe.m in Sources */,
+				35C1603872218AD46A416B9BE122A399 /* SFCrashInspector-dummy.m in Sources */,
+				6206B8A056CCFC120576345550D4A1E8 /* SFCrashInspectorManager.m in Sources */,
+				B98E02228F21A30649799C18FEDF4C1D /* SFGcdTimer+TimerCrash.m in Sources */,
+				1A28B9A07B3B647FF7ECE17B8AEC080C /* SFGcdTimer.m in Sources */,
+				124E2F57FF9FA010B348FBCDD4E44334 /* SFProxy.m in Sources */,
+				2DF4373EADFBCEC05F5C1FA1C96F26C8 /* SFTimerProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,23 +688,23 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		54E8C61ACB3F0196231AFCDD0137C2EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-SFCrashInspector_Example";
-			target = C3CCC95DDCF5387018E95B8879D492B6 /* Pods-SFCrashInspector_Example */;
-			targetProxy = 36AA6205AF9FE48783DBEB58C61ADDAC /* PBXContainerItemProxy */;
-		};
-		5C61278D674CF963BB2859264315D589 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SFCrashInspector;
-			target = AB50C4AE2907070C6EBF0158045453A0 /* SFCrashInspector */;
-			targetProxy = F6473788E6476A7385A4186CB610A5E8 /* PBXContainerItemProxy */;
-		};
-		89A60B5EC865EE30674A97269CE1C98A /* PBXTargetDependency */ = {
+		CCE6348BFCF5306A77D06CC708300928 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FBSnapshotTestCase;
 			target = 98A98149697C80CEF8D5772791E92E66 /* FBSnapshotTestCase */;
-			targetProxy = 55167EC40089F1F9EE48847C01DCD860 /* PBXContainerItemProxy */;
+			targetProxy = D20D15A5F30766114C9CCB899CAA9FDA /* PBXContainerItemProxy */;
+		};
+		CE12B86F462D13C32511F3D09BE792BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-SFCrashInspector_Example";
+			target = C3CCC95DDCF5387018E95B8879D492B6 /* Pods-SFCrashInspector_Example */;
+			targetProxy = FE2A97BC7A5C1EEF016EEA35913E077F /* PBXContainerItemProxy */;
+		};
+		FE83508865839D3FC5DA374CADB0758B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SFCrashInspector;
+			target = AB50C4AE2907070C6EBF0158045453A0 /* SFCrashInspector */;
+			targetProxy = A8B826F89FDBE0628785D13EC6612EEA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -897,6 +901,37 @@
 			};
 			name = Debug;
 		};
+		58361343A4EC7E9B1D2C2DE129E2EE50 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C56E3582072AE018A7F519816080E41 /* SFCrashInspector.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SFCrashInspector/SFCrashInspector-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SFCrashInspector/SFCrashInspector-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SFCrashInspector/SFCrashInspector.modulemap";
+				PRODUCT_MODULE_NAME = SFCrashInspector;
+				PRODUCT_NAME = SFCrashInspector;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		5890FDB7816CE38032AF3792F90410C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FAA00B4892F020053A41EFAFED6DF996 /* Pods-SFCrashInspector_Example.debug.xcconfig */;
@@ -994,37 +1029,6 @@
 			};
 			name = Debug;
 		};
-		AA8E87A958CD1841850B7109E0C1336E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FBD4FCEEAEFBB40F57BB1DDB40694392 /* SFCrashInspector.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SFCrashInspector/SFCrashInspector-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SFCrashInspector/SFCrashInspector-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SFCrashInspector/SFCrashInspector.modulemap";
-				PRODUCT_MODULE_NAME = SFCrashInspector;
-				PRODUCT_NAME = SFCrashInspector;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		BE874B114A0991701B09229EAAA4CA84 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C6513B09838318BD763CFD5390D1DE0 /* FBSnapshotTestCase.release.xcconfig */;
@@ -1057,9 +1061,9 @@
 			};
 			name = Release;
 		};
-		DEA53CAC05FA3BF8809167024830F42D /* Release */ = {
+		EA3E5056426E63F0EA092F0BF4D591ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D15DB042560014155AB874C1BA7FF6D /* SFCrashInspector.release.xcconfig */;
+			baseConfigurationReference = 83BBE3C4768430C7433DB1EF42A274D0 /* SFCrashInspector.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1101,20 +1105,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		24D75CDD9E4A1DF629FC4DD7AB598AB8 /* Build configuration list for PBXNativeTarget "SFCrashInspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58361343A4EC7E9B1D2C2DE129E2EE50 /* Debug */,
+				EA3E5056426E63F0EA092F0BF4D591ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
 				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		586D0AC240AFF6D9545B18F5F9E480BE /* Build configuration list for PBXNativeTarget "SFCrashInspector" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AA8E87A958CD1841850B7109E0C1336E /* Debug */,
-				DEA53CAC05FA3BF8809167024830F42D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
